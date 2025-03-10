@@ -14,6 +14,25 @@
 # They also could contain extremely sensitive data
 /[Mm]emoryCaptures/
 
+# Ignore asset metadata
+/[Aa]ssets/AssetStoreTools*
+/[Aa]ssets/Plugins*
+
+# Ignore auto-generated project files
+/[Pp]rojectSettings/ProjectVersion.txt
+/[Pp]rojectSettings/EditorBuildSettings.asset
+/[Pp]rojectSettings/EditorSettings.asset
+
+# Ignore user-specific files
+/[Uu]serSettings/
+
+# Ignore Unity crash reports
+/[Ss]tackTrace/
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.d
+
 # Recordings can get excessive in size
 /[Rr]ecordings/
 
