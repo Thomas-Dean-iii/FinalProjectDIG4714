@@ -531,9 +531,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfbcbe7e32e5e6747b3ca747e37e9e60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 2
-  smoothing: 5
   player: {fileID: 1650978595}
+  offset: {x: 0, y: 2, z: -4}
+  sensitivity: 2
 --- !u!1 &1032955278
 GameObject:
   m_ObjectHideFlags: 0
@@ -777,7 +777,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e768d6f5e4112849b396ef8fd61b8d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
+  moveSpeed: 10
 --- !u!54 &1650978591
 Rigidbody:
   m_ObjectHideFlags: 0
