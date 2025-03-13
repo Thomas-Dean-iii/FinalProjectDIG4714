@@ -22,24 +22,15 @@ public class PlayerController : MonoBehaviour
         // Get input for movement
         xInput = Input.GetAxis("Horizontal");
         yInput = Input.GetAxis("Vertical");
+
+       // Vector3 forceMovement = new Vector3 (xInput, 0f, yInput) * moveSpeed;
+        //rb.AddForce(forceMovement);
     }
 
     void FixedUpdate()
     {
-        
-        Vector3 forward = Camera.main.transform.forward;
-        Vector3 right = Camera.main.transform.right;
 
-        // Ensure the movement is horizontal (ignore camera tilt)
-        forward.y = 0;
-        right.y = 0;
-        forward.Normalize();
-        right.Normalize();
-
-        
-        Vector3 move = (forward * yInput + right * xInput).normalized;
-
-        
-        rb.MovePosition(transform.position + move * Time.deltaTime * moveSpeed);
+      Vector3 movement =(xInput * transform.right + yInput * transform.forward).normalized;
+      rb.velocity = movement * moveSpeed;
     }
 }
