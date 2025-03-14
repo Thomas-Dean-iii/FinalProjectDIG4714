@@ -29,8 +29,14 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-
       Vector3 movement =(xInput * transform.right + yInput * transform.forward).normalized;
-      rb.velocity = movement * moveSpeed;
+     if(movement == Vector3.zero)
+     {
+        rb.velocity = Vector3.zero;
+     }
+     else
+     {
+         rb.velocity = movement * moveSpeed;
+     }
     }
 }

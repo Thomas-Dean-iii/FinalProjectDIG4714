@@ -7,6 +7,9 @@ public class EnemyMovement : MonoBehaviour
 {
     public Transform player;
     private NavMeshAgent m_Agent;
+    public PlayerHealth playerHealth;
+
+    public float Damage = 15f;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,5 +20,13 @@ public class EnemyMovement : MonoBehaviour
     void Update()
     {
         m_Agent.destination = player.transform.position;
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("Player"))
+        {
+            playerHealth.TakeDamage(Damage);
+        }
     }
 }
