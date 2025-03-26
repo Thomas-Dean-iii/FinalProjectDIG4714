@@ -14,12 +14,26 @@ public class EnemyMovement : MonoBehaviour
     void Start()
     {
         m_Agent = GetComponent<NavMeshAgent>();
+
+         if (player == null)
+        {
+            GameObject playerObj = GameObject.FindWithTag("Player");
+            if (playerObj != null)
+            {
+                player = playerObj.transform; // Store the Transform, not position
+            }
+            else
+            {
+                Debug.LogError("Player not found! Make sure it has the 'Player' tag.");
+            }
+        }
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        m_Agent.destination = player.transform.position;
+        m_Agent.destination = player.position;
     }
 
     void OnCollisionEnter(Collision collision)
