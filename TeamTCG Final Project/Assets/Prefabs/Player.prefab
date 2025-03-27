@@ -608,5 +608,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 0
-  healthBar: {fileID: 6338454808691086867}
-  playerOBJ: {fileID: 0}
+  healthBar: {fileID: 2794146098595968917}
+  playerOBJ: {fileID: 6622917534908971233}
