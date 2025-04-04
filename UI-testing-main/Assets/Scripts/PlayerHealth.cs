@@ -40,7 +40,7 @@ public class PlayerHealth : MonoBehaviour
         {
             isDead = true;
             gameManager.gameOver();
-            Destroy(playerOBJ);
+            
         }
     }
 }
