@@ -7,7 +7,8 @@ using TMPro;
 
 public class ScoreManager : MonoBehaviour
 {
-     public Text scoreText;
+    public Text scoreText;
+    public Text finalScoreText;
     public Text highscoreText;
     private float timer;
 
@@ -36,12 +37,24 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
-    void CheckHighScore()
+    public void HighScoreUpdate()
     {
-        if (score > PlayerPrefs.GetInt("HighScore", 0))
+        if(PlayerPrefs.HasKey("SavedHighScore"))
         {
-            PlayerPrefs.SetInt("HighScore", score);
+            if (score > PlayerPrefs.GetInt("SavedHighScore"))
+            {
+                PlayerPrefs.SetInt("SavedHighScore", score);
+              
+            }
         }
+        else
+        {
+            PlayerPrefs.SetInt("SavedHighScore", score);
+        }
+
+        finalScoreText.text = "FINAL SCORE: " + score.ToString();
+        highscoreText.text = PlayerPrefs.GetInt("SavedHighScore").ToString();
     }
+
 }
 

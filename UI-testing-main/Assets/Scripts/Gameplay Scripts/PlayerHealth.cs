@@ -15,6 +15,8 @@ public class PlayerHealth : MonoBehaviour
 
     public GameManagerScript gameManager;
 
+    public ScoreManager scoreManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,7 +42,9 @@ public class PlayerHealth : MonoBehaviour
         {
             isDead = true;
             gameManager.gameOver();
-            
+
+            scoreManager.HighScoreUpdate();
+
         }
     }
 }
