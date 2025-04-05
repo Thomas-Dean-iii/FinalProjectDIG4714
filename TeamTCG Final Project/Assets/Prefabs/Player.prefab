@@ -594,6 +594,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
+  characterData: {fileID: 11400000, guid: 911b0fce79cefb945b7b5d3410384d5c, type: 2}
 --- !u!114 &1539943169948167314
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -8,7 +8,10 @@ public class PlayerController : MonoBehaviour
 
     float xInput;
     float yInput;
+
+
     Rigidbody rb;
+    public CharacterScriptableObject characterData;
 
     // Start is called before the first frame update
     void Start()
@@ -36,7 +39,7 @@ public class PlayerController : MonoBehaviour
      }
      else
      {
-         rb.velocity = movement * moveSpeed;
+         rb.velocity = movement * characterData.MoveSpeed;
      }
     }
 }
