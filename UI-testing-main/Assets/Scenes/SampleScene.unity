@@ -3690,6 +3690,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -50
       objectReference: {fileID: 0}
+    - target: {fileID: 6995787582176137899, guid: e8cde1684d84c6c449cd2d9f036c2884, type: 3}
+      propertyPath: scoreManager
+      value: 
+      objectReference: {fileID: 2096441480}
     - target: {fileID: 8126336418946843234, guid: e8cde1684d84c6c449cd2d9f036c2884, type: 3}
       propertyPath: m_Name
       value: UI (Prototype)

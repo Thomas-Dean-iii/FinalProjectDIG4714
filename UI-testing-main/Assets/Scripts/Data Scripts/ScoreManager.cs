@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
+using System.IO;
+using System.Xml.Serialization;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -12,10 +12,20 @@ public class ScoreManager : MonoBehaviour
     public Text highscoreText;
     private float timer;
 
+
     int score = 0;
     int highscore = 0;
+
+    [System.Serializable]
+    public class HighScoreData
+    {
+        public int highscore;
+    }
+
+
     void Start()
     {
+        LoadHighScore();
         scoreText.text = score.ToString() + "SCORE:";
         highscoreText.text = "HIGH SCORE:" + highscore.ToString();
     }
@@ -23,7 +33,7 @@ public class ScoreManager : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        score = (int)timer; // Update score based on elapsed time
+        score = (int)timer; 
 
         scoreText.text = "SCORE: " + score.ToString();
 
@@ -31,15 +41,16 @@ public class ScoreManager : MonoBehaviour
         {
             highscore = score;
             highscoreText.text = "HIGH SCORE: " + highscore.ToString();
-
-            PlayerPrefs.SetInt("HighScore", highscore);
-            PlayerPrefs.Save();
+            SaveHighScore();
         }
     }
 
     public void HighScoreUpdate()
     {
-        if(PlayerPrefs.HasKey("SavedHighScore"))
+        finalScoreText.text = "FINAL SCORE: " + score.ToString();
+        highscoreText.text = "HIGH SCORE: " + highscore.ToString();
+
+        if (PlayerPrefs.HasKey("SavedHighScore"))
         {
             if (score > PlayerPrefs.GetInt("SavedHighScore"))
             {
@@ -54,6 +65,44 @@ public class ScoreManager : MonoBehaviour
 
         finalScoreText.text = "FINAL SCORE: " + score.ToString();
         highscoreText.text = PlayerPrefs.GetInt("SavedHighScore").ToString();
+    }
+
+    public void SaveHighScore()
+    {
+        HighScoreData data = new HighScoreData();
+        data.highscore = highscore;
+
+        XmlSerializer seriallizer = new XmlSerializer(typeof(HighScoreData));
+        using (FileStream stream = new FileStream(Application.persistentDataPath + "/highscore.xml", FileMode.Create))
+        {
+            seriallizer.Serialize(stream, data);
+        }
+    }
+
+    void LoadHighScore()
+    {
+        string path = Application.persistentDataPath + "/highscore.xml";
+        if (File.Exists(path))
+        {
+            XmlSerializer serializer = new XmlSerializer(typeof(HighScoreData));
+            using (FileStream stream = new FileStream(path, FileMode.Open))
+            {
+                HighScoreData data = (HighScoreData)serializer.Deserialize(stream);
+                highscore = data.highscore;
+            }
+        }
+    }
+
+    public void ResetHighScore()
+    {
+        highscore = 0;
+        SaveHighScore();
+        highscoreText.text = "HIGH SCORE: " + highscore.ToString();
+    }
+
+    void OnApplicationQuit()
+    {
+        SaveHighScore();
     }
 
 }
