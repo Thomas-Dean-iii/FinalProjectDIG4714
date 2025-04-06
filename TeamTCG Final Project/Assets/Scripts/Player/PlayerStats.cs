@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class PlayerStats : MonoBehaviour
 {
@@ -19,6 +21,16 @@ public class PlayerStats : MonoBehaviour
     public int experienceCap = 100;
     public int experienceCapIncrease;
 
+    //I-Frames
+    [Header("I-Frames")]
+    public float iFrameDuration;
+    private float iFrameTimer;
+    private bool isInvincible;
+
+    [Header("Health bar")]
+    public Image healthBar;
+   //public GameObject playerOBJ;
+
 
 
     void Awake()
@@ -28,6 +40,19 @@ public class PlayerStats : MonoBehaviour
         currentMoveSpeed = charaterData.MoveSpeed;
         currentMight = charaterData.Might;
         currentProjectileSpeed = charaterData.ProjectileSpeed;
+    }
+
+     void Update()
+    {
+        if(iFrameTimer > 0)
+        {
+            iFrameTimer -= Time.deltaTime;
+        }
+        //If the Invinciblity timer reaches 0 , set invinsiblity bool to false
+        else if(isInvincible)
+        {
+            isInvincible = false;
+        }
     }
 
     public void IncreaseExperience(int amount)
@@ -45,5 +70,28 @@ public class PlayerStats : MonoBehaviour
             experience -= experienceCap;
             experienceCap += experienceCapIncrease;
         }
+    }
+
+    public void TakeDamage(float dmg)
+    {
+        //if player isnt invincible
+        if(!isInvincible)
+        {
+            currentHealth -= dmg;
+            healthBar.fillAmount = currentHealth / charaterData.MaxHealth;
+
+            iFrameTimer = iFrameDuration;
+            isInvincible = true;
+
+            if(currentHealth <= 0)
+            {
+                Kill();
+            }
+        }
+    }
+
+    public void Kill()
+    {
+        Debug.Log("Player IS DEAD");
     }
 }

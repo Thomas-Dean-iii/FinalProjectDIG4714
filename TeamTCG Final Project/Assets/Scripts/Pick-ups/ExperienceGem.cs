@@ -9,7 +9,7 @@ public class ExperienceGem : MonoBehaviour, ICollectible
     public void Collect()
     {
         PlayerStats player = FindObjectOfType<PlayerStats>(); 
-        player.IncreasedExperience(experienceGranted);
+        player.IncreaseExperience(experienceGranted);
         Destroy(gameObject);
     }
 }

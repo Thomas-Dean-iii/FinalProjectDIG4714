@@ -30,8 +30,8 @@ public class DropRateManager : MonoBehaviour
         //Check if there are possible drops
         if(possibleDrops.Count > 0)
         {
-            Drops drops = possibleDrops(Random.Range(0, possibleDrops.Count));
-            Instantiate(rate.itemPrefab, transform.position, Quaternion.identity);
+            Drops drops = possibleDrops[UnityEngine.Random.Range(0, possibleDrops.Count)];
+            Instantiate(drops.itemPrefab, transform.position, Quaternion.identity);
         }
     }
 }

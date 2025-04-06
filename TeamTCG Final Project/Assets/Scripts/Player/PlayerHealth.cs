@@ -9,7 +9,7 @@ public class PlayerHealth : MonoBehaviour
     public float currentHealth = 0f;
 
     public Image healthBar;
-    public GameObject playerOBJ;
+   // public GameObject playerOBJ;
 
     // Start is called before the first frame update
     void Start()
@@ -34,7 +34,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if(currentHealth <= 0)
         {
-            Destroy(playerOBJ);
+            //Destroy(playerOBJ);
         }
     }
 }
