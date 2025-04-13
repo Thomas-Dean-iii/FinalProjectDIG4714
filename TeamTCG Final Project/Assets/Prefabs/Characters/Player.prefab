@@ -594,6 +594,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 50
+  RotateSpeed: 150
+  GravityMultiplier: 2
+  cameraTransform: {fileID: 4965757012282061456}
   characterData: {fileID: 11400000, guid: 911b0fce79cefb945b7b5d3410384d5c, type: 2}
 --- !u!114 &6315939090097361367
 MonoBehaviour:
