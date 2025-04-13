@@ -455,6 +455,7 @@ GameObject:
   - component: {fileID: 8248541278396690307}
   - component: {fileID: 1802661953411544020}
   - component: {fileID: 6315939090097361367}
+  - component: {fileID: 7453248258623175769}
   - component: {fileID: 7791042243441373953}
   m_Layer: 0
   m_Name: Player
@@ -614,6 +615,24 @@ MonoBehaviour:
   experienceCapIncrease: 100
   iFrameDuration: 0.5
   healthBar: {fileID: 2794146098595968917}
+--- !u!114 &7453248258623175769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6622917534908971233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 560f9fc1eed37e3439b236c4e84a1fc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilityOne: {fileID: 11400000, guid: 226784ea5719abd4496f086b2172a641, type: 2}
+  abilityTwo: {fileID: 0}
+  abilityThree: {fileID: 0}
+  key1: 304
+  key2: 0
+  key3: 0
 --- !u!114 &7791042243441373953
 MonoBehaviour:
   m_ObjectHideFlags: 0

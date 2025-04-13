@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f015df537f1157e458b2dfbf61137c30, type: 3}
+  m_Name: BalloonScriptableObject
+  m_EditorClassIdentifier: 
+  name: 
+  cooldownTime: 0
+  activeTime: 0
+  balooonVelocity: 0
+  balloon: {fileID: 4466065593601591445, guid: a0048b807e855c94babba1a225d9ba11, type: 3}
+  target: {fileID: 6622917534908971233, guid: 4de875d5c18347443b872495d0e24990, type: 3}
