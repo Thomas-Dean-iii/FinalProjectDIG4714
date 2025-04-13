@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -57,10 +58,25 @@ public class PlayerStats : MonoBehaviour
 
     public void IncreaseExperience(int amount)
     {
-        experience += amount;
-        
-        LevelUpChecker();
+        try
+        {
+            experience += amount;
+
+            //Check if the current experience exceeds the experienceCap
+            if (experience > experienceCap)
+            {
+                throw new ArgumentException("Current experience cannot exceed experienceCap.");
+            }
+
+            LevelUpChecker();
+        }
+        catch (ArgumentException ex)
+        {
+            Debug.LogError("Error in increasing experience: " + ex.Message);
+            experience = experienceCap;  //Cap the experience to the maximum allowed
+        }
     }
+
     void LevelUpChecker()
     {
         if(experience >= experienceCap)//Increase level if the experience is more than or equal to the required amount to level up
