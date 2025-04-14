@@ -43,10 +43,6 @@ public class PlayerController : MonoBehaviour
         _vInput = Input.GetAxis("Vertical") * characterData.MoveSpeed;
         _hInput = Input.GetAxis("Horizontal") * characterData.MoveSpeed;
 
-        if(Input.GetKey("w"))
-        {
-            animator.SetBool("isWalking", true);
-        }
 
     }
 
