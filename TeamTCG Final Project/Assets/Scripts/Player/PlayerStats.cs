@@ -9,6 +9,9 @@ public class PlayerStats : MonoBehaviour
 {
     public CharacterScriptableObject charaterData;
 
+    public delegate void PlayerEventHandler();
+    public event PlayerEventHandler OnPlayerDeath;
+
     float currentHealth;
     float currentRecovery;
     float currentMoveSpeed;
@@ -108,6 +111,6 @@ public class PlayerStats : MonoBehaviour
 
     public void Kill()
     {
-        Debug.Log("Player IS DEAD");
+        OnPlayerDeath?.Invoke();
     }
 }
