@@ -7,7 +7,7 @@ public class ChunkManager : MonoBehaviour
     public GameObject chunkPrefab;
     public Transform player;
     public int chunkRadius = 2; // How many chunks around the player
-    public Vector2 chunkSize = new Vector2(5f, 5f); // X and Z size of one chunk
+    public Vector2 chunkSize = new Vector2(50f, 50f);
 
     private Dictionary<Vector2Int, GameObject> activeChunks = new Dictionary<Vector2Int, GameObject>();
     private Vector2Int currentPlayerChunk;

@@ -115,6 +115,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3710972981486368527}
+  - component: {fileID: 1754115153336749067}
   m_Layer: 0
   m_Name: Chunk
   m_TagString: Untagged
@@ -138,3 +139,40 @@ Transform:
   - {fileID: 687569616485407645}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1754115153336749067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3508132468899024433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0378699750e793245af00d89231bb92f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frequentProps:
+  - {fileID: 2278961590671023013, guid: d9c6727f3721c5a4086ad394d37bb744, type: 3}
+  - {fileID: 2115736934270051077, guid: d08851aeacbadfa42a2b661f2170de25, type: 3}
+  - {fileID: 6043276807455756731, guid: 967e41698de928e4c80fc36cc7741738, type: 3}
+  - {fileID: 4757044023648554604, guid: f0e640d23a5c7c24e8c0100f0a558da4, type: 3}
+  rareProps:
+  - {fileID: 251468165956329866, guid: 378f11e9a1701b044b0ec82ba9740347, type: 3}
+  - {fileID: 6991265809765871834, guid: fea69626389bd194daaf921d168eefe7, type: 3}
+  - {fileID: 8972702753804301405, guid: 20c219df061c967429db241b1ea3a026, type: 3}
+  - {fileID: 2911402406548525111, guid: 1c24bab945ee8164ba75c6fc6d2fa148, type: 3}
+  - {fileID: 2519895525379701335, guid: 3279d46e98077ab44ab85e34b99064f0, type: 3}
+  - {fileID: 7362173557240152681, guid: 7a3134ee04abb294291489477a09cec4, type: 3}
+  - {fileID: 3059948811161385093, guid: 29d299ac32b5f83489084748c806a29b, type: 3}
+  - {fileID: 881131606133366919, guid: f7ff35a5deb7e914fabf51eee4e649a6, type: 3}
+  - {fileID: 6620679192469754238, guid: 173b1027a6d1ed544a1379cedb067a9c, type: 3}
+  - {fileID: 6254209548634413423, guid: 01d6e8ec967d2c844920925bdebf5c7b, type: 3}
+  - {fileID: 1340042676343016155, guid: e279d3b56060181478049ff4e3cadcff, type: 3}
+  - {fileID: 4363065753263768193, guid: 916cd135a71750a4483f84f736ebe36d, type: 3}
+  - {fileID: 6290762886668141006, guid: ce5fc1ae746770c48a546879d9226882, type: 3}
+  - {fileID: 9011630454678104891, guid: 9c8a0db7064c30641af7bab34d4467e2, type: 3}
+  - {fileID: 1217676977117247504, guid: 69648293260ae5248b46f692a97f8200, type: 3}
+  - {fileID: 6580055153048696029, guid: 033fb5a72ae76a54f8e6e29275edd84b, type: 3}
+  frequentCount: 100
+  rareCount: 30
+  chunkSize: {x: 50, y: 50}
