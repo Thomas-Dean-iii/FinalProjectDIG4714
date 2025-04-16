@@ -6,10 +6,12 @@ public class ChunkProps : MonoBehaviour
 {
     [Header("Prop Settings")]
     public GameObject[] frequentProps;
+    public GameObject[] mediumProps;
     public GameObject[] rareProps;
 
-    public int frequentCount = 100; //How frequently things like grass spawn
-    public int rareCount = 30; //How frequently things like trees and park benches spawn
+    public int frequentCount = 1; // Grass frequency
+    public int mediumCount = 5;   // Tree and rock frequency
+    public int rareCount = 10;    // Prebuilt frequency
 
     [Header("Chunk Settings")]
     public Vector2 chunkSize = new Vector2(50f, 50f);
@@ -17,6 +19,7 @@ public class ChunkProps : MonoBehaviour
     void Start()
     {
         SpawnProps(frequentProps, frequentCount);
+        SpawnProps(mediumProps, mediumCount);
         SpawnProps(rareProps, rareCount);
     }
 
@@ -33,12 +36,26 @@ public class ChunkProps : MonoBehaviour
             );
 
             GameObject propToSpawn = propArray[Random.Range(0, propArray.Length)];
-            Instantiate(
+            GameObject prop = Instantiate(
                 propToSpawn,
                 transform.position + randomPosition,
                 Quaternion.identity,
                 this.transform
             );
+
+            // Height correction to avoid clipping with ground
+            Renderer[] renderers = prop.GetComponentsInChildren<Renderer>();
+            if (renderers.Length > 0)
+            {
+                Bounds combinedBounds = renderers[0].bounds;
+                for (int r = 1; r < renderers.Length; r++)
+                {
+                    combinedBounds.Encapsulate(renderers[r].bounds);
+                }
+
+                float yOffset = combinedBounds.min.y - prop.transform.position.y;
+                prop.transform.position -= new Vector3(0f, yOffset, 0f);
+            }
         }
     }
 }
