@@ -9,5 +9,5 @@ public class Ability : ScriptableObject
     public float activeTime;
 
     //activates the ability
-    public virtual void Activate(GameObject parent) { }
+    public virtual void Activate() { }
 }

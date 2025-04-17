@@ -7,11 +7,12 @@ public class BalloonAbility : Ability
 {
     public float balooonVelocity;
     public GameObject myBalloon;
-    public GameObject target;
+    public PlayerController target;
 
-    public override void Activate(GameObject parent)
+    public override void Activate()
     {
-        GameObject balloon = Instantiate(myBalloon, new Vector3 (0, 0, 10), Quaternion.identity) as GameObject;
+        target = FindObjectOfType<PlayerController>();
+        GameObject balloon = Instantiate(myBalloon, target.transform.position + new Vector3(0,1,0), Quaternion.identity) as GameObject;
         balloon.transform.SetParent(target.transform);
     }
 }

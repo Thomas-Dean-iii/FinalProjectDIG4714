@@ -51,7 +51,7 @@ public class PlayerAbilities : MonoBehaviour
             case AbilityOneState.ready:
                 if (Input.GetKeyDown(key1))
                 {
-                    abilityOne.Activate(gameObject);
+                    abilityOne.Activate();
                     state1 = AbilityOneState.active;
                     activeTime = abilityOne.activeTime;
                 }
@@ -84,7 +84,7 @@ public class PlayerAbilities : MonoBehaviour
             case AbilityTwoState.ready:
                 if (Input.GetKeyDown(key2))
                 {
-                    abilityTwo.Activate(gameObject);
+                    abilityTwo.Activate();
                     state2 = AbilityTwoState.active;
                     activeTime = abilityOne.activeTime;
                 }
@@ -117,7 +117,7 @@ public class PlayerAbilities : MonoBehaviour
             case AbilityThreeState.ready:
                 if (Input.GetKeyDown(key3))
                 {
-                    abilityOne.Activate(gameObject);
+                    abilityOne.Activate();
                     state3 = AbilityThreeState.active;
                     activeTime = abilityOne.activeTime;
                 }
