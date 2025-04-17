@@ -6,13 +6,12 @@ using UnityEngine;
 public class BalloonAbility : Ability
 {
     public float balooonVelocity;
-    public GameObject balloon;
+    public GameObject myBalloon;
     public GameObject target;
 
     public override void Activate(GameObject parent)
     {
-        Instantiate(balloon);
+        GameObject balloon = Instantiate(myBalloon, new Vector3 (0, 0, 10), Quaternion.identity) as GameObject;
         balloon.transform.SetParent(target.transform);
-        
     }
 }
