@@ -937,6 +937,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -694490478743703797, guid: c168d87ed342c72439af141a9947465b, type: 3}
+      propertyPath: drops.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -694490478743703797, guid: c168d87ed342c72439af141a9947465b, type: 3}
+      propertyPath: drops.Array.data[1].name
+      value: Blue xp
+      objectReference: {fileID: 0}
+    - target: {fileID: -694490478743703797, guid: c168d87ed342c72439af141a9947465b, type: 3}
+      propertyPath: drops.Array.data[1].dropRate
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: -694490478743703797, guid: c168d87ed342c72439af141a9947465b, type: 3}
+      propertyPath: drops.Array.data[1].itemPrefab
+      value: 
+      objectReference: {fileID: 8241760363351819363, guid: cb2de65a645a67a46b906d2780af199c, type: 3}
     - target: {fileID: 2687698620320728006, guid: c168d87ed342c72439af141a9947465b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.3582187
@@ -2049,6 +2065,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1614979184}
   - component: {fileID: 1614979183}
+  - component: {fileID: 1614979185}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2089,6 +2106,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1614979185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1614979182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0744d4fd0779bef428528c22507efee7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pooledObjects: []
+  objectToPool: {fileID: 5349059842377526068, guid: e8cd2f2e7ed7ebc4a86e0a1afe7c1463, type: 3}
+  amountToPool: 20
 --- !u!1 &1732138571 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 75f39e78fc0b2ab47a5895e5a223a272, type: 3}
