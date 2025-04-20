@@ -32,6 +32,12 @@ public class DropRateManager : MonoBehaviour
         {
             Drops drops = possibleDrops[UnityEngine.Random.Range(0, possibleDrops.Count)];
             Instantiate(drops.itemPrefab, transform.position, Quaternion.identity);
+
+            GameObject xp = EXPObjectPool.SharedInstance.GetPooledObject(); 
+            if (xp != null) 
+            {
+                xp.SetActive(true);
+            }
         }
     }
 }

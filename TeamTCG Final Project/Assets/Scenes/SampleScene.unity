@@ -249,6 +249,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -694490478743703797, guid: c168d87ed342c72439af141a9947465b, type: 3}
+      propertyPath: drops.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -694490478743703797, guid: c168d87ed342c72439af141a9947465b, type: 3}
+      propertyPath: drops.Array.data[1].name
+      value: Green xp
+      objectReference: {fileID: 0}
+    - target: {fileID: -694490478743703797, guid: c168d87ed342c72439af141a9947465b, type: 3}
+      propertyPath: drops.Array.data[1].dropRate
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: -694490478743703797, guid: c168d87ed342c72439af141a9947465b, type: 3}
+      propertyPath: drops.Array.data[1].itemPrefab
+      value: 
+      objectReference: {fileID: 8241760363351819363, guid: cb2de65a645a67a46b906d2780af199c, type: 3}
     - target: {fileID: 2687698620320728006, guid: c168d87ed342c72439af141a9947465b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.337202
@@ -1531,6 +1547,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1614979184}
   - component: {fileID: 1614979183}
+  - component: {fileID: 1614979185}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1571,6 +1588,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1614979185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1614979182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdfbf7e020e332140a51e2b1f24e50de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pooledObjects: []
+  objectToPool: {fileID: 1835646110339014596, guid: 3e8b7d1f61dcd3c4fa4facf425c3839c, type: 3}
+  amountToPool: 20
 --- !u!1 &1845611919
 GameObject:
   m_ObjectHideFlags: 0
