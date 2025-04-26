@@ -8,11 +8,18 @@ public class BalloonAbility : Ability
     public float balooonVelocity;
     public GameObject myBalloon;
     public PlayerController target;
+    public float rotationSpeed;
 
     public override void Activate()
     {
         target = FindObjectOfType<PlayerController>();
-        GameObject balloon = Instantiate(myBalloon, target.transform.position + new Vector3(0,1,0), Quaternion.identity) as GameObject;
+        GameObject balloon = Instantiate(myBalloon, target.transform.position + new Vector3(0,0,3), Quaternion.identity) as GameObject;
         balloon.transform.SetParent(target.transform);
+    }
+
+    public void Update()
+    {
+        GameObject balloon = myBalloon;
+        myBalloon.transform.RotateAround(target.transform.position, new Vector3(0, 1, 0), rotationSpeed * Time.deltaTime);
     }
 }

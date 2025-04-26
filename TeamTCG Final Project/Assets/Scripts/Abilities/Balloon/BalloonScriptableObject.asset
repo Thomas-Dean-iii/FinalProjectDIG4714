@@ -18,3 +18,4 @@ MonoBehaviour:
   balooonVelocity: 0
   myBalloon: {fileID: 4466065593601591445, guid: a0048b807e855c94babba1a225d9ba11, type: 3}
   target: {fileID: 0}
+  rotationSpeed: 20
