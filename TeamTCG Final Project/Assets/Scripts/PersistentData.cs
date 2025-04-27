@@ -44,7 +44,7 @@ public class PersistentData : MonoBehaviour
 
     private IEnumerator WaitForSceneLoad()
     {
-        SceneManager.LoadScene("LevelDesign");
+        SceneManager.LoadScene("SampleScene");
 
         yield return null;
 
