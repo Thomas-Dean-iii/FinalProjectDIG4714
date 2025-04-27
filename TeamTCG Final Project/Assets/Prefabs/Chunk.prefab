@@ -166,14 +166,18 @@ MonoBehaviour:
   - {fileID: 7362173557240152681, guid: 7a3134ee04abb294291489477a09cec4, type: 3}
   - {fileID: 3059948811161385093, guid: 29d299ac32b5f83489084748c806a29b, type: 3}
   rareProps:
+  - {fileID: 3203034365504353905, guid: 4f159ea8bd6b086499cb23e130f86258, type: 3}
+  - {fileID: 8809811768448255789, guid: f878658e9b913ac46a05e1ba1ed361dd, type: 3}
   - {fileID: 5837590093756738923, guid: 168f4f8fb164f8b40bc62f75f74c4ece, type: 3}
-  - {fileID: 133174776299443549, guid: 44910cd08c642e74a94f324a7b2198a3, type: 3}
   - {fileID: 5384659613586597020, guid: 878e6773092fb0347807d2d7cc6a9b97, type: 3}
-  - {fileID: 922106550088173891, guid: 94b45810c070e684b9e4218ef79fb992, type: 3}
-  - {fileID: 5493390220331196873, guid: 5462b569863cb2945abc1e9b593eb551, type: 3}
+  - {fileID: 6049731926808620849, guid: 94b45810c070e684b9e4218ef79fb992, type: 3}
+  - {fileID: 8886274524809317188, guid: 7603ffd8ee8468f42b3156cde2b800fd, type: 3}
   - {fileID: 4400767916217534255, guid: 13d50c089f6819b458bd2d0221e63202, type: 3}
-  - {fileID: 8050819705236077368, guid: b44ff4536b457c14385f86b162db7e57, type: 3}
+  - {fileID: 8446902826288895648, guid: e30bc770ec101854c8f1502b32aa42e5, type: 3}
+  - {fileID: 6301488176788299976, guid: 74a1851edd9860e45beb0bccfb9e3ecf, type: 3}
   frequentCount: 500
   mediumCount: 10
   rareCount: 5
   chunkSize: {x: 50, y: 50}
+  minDistanceBetweenProps: 3
+  maxPlacementAttempts: 10
