@@ -8,8 +8,8 @@ public class ExpManager : MonoBehaviour, IDataPersistence
 {
     public int level;
     public int currentExp;
-    public int expToLevel = 100; // exp needed to level up
-    public float expMultiplier = 1.2f; // multiplier for exp, adds 20% more exp each level
+    public int expToLevel = 200; // exp needed to level up
+    public float expMultiplier = 1.4f; // multiplier for exp, adds 20% more exp each level
     public Slider expSlider; // UI slider to show exp progress
     public TMP_Text currentLevelText;
 

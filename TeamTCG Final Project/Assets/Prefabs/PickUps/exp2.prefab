@@ -118,4 +118,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 795936c5e17b5604fa91c3e01d669b1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  experienceGranted: 50
+  experienceGranted: 15

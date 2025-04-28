@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ExperienceGem : MonoBehaviour, ICollectible
 {
-    public int experienceGranted = 10;
+    public int experienceGranted = 2;
 
     public delegate void OnCollectibleCollected(int exp);
     public static event OnCollectibleCollected OnCollectibleCollectedEvent;

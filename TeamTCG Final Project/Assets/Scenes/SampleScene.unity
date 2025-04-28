@@ -403,6 +403,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 440207840368292033, guid: e8cd2f2e7ed7ebc4a86e0a1afe7c1463, type: 3}
+      propertyPath: experienceGranted
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 2739624537656286113, guid: e8cd2f2e7ed7ebc4a86e0a1afe7c1463, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.13318062
@@ -2890,8 +2894,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: 0
   currentExp: 0
-  expToLevel: 100
-  expMultiplier: 1.2
+  expToLevel: 250
+  expMultiplier: 1.4
   expSlider: {fileID: 17853946}
   currentLevelText: {fileID: 746478381}
 --- !u!114 &1452931372
