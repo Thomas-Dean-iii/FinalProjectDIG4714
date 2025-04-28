@@ -161,7 +161,7 @@ MonoBehaviour:
   - {fileID: 9011630454678104891, guid: 9c8a0db7064c30641af7bab34d4467e2, type: 3}
   - {fileID: 251468165956329866, guid: 378f11e9a1701b044b0ec82ba9740347, type: 3}
   - {fileID: 2519895525379701335, guid: 3279d46e98077ab44ab85e34b99064f0, type: 3}
-  - {fileID: 8972702753804301405, guid: 20c219df061c967429db241b1ea3a026, type: 3}
+  - {fileID: 1966127837282447140, guid: 20c219df061c967429db241b1ea3a026, type: 3}
   - {fileID: 6991265809765871834, guid: fea69626389bd194daaf921d168eefe7, type: 3}
   - {fileID: 7362173557240152681, guid: 7a3134ee04abb294291489477a09cec4, type: 3}
   - {fileID: 3059948811161385093, guid: 29d299ac32b5f83489084748c806a29b, type: 3}
@@ -181,3 +181,7 @@ MonoBehaviour:
   chunkSize: {x: 50, y: 50}
   minDistanceBetweenProps: 3
   maxPlacementAttempts: 10
+  maxPhysicsOverlapRetries: 3
+  propLayerMask:
+    serializedVersion: 2
+    m_Bits: 64

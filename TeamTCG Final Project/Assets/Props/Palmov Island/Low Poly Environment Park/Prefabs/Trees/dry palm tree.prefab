@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6656928671496309391}
   - component: {fileID: 8901045885617995333}
   - component: {fileID: -2133340717279811231}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: dry palm tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}

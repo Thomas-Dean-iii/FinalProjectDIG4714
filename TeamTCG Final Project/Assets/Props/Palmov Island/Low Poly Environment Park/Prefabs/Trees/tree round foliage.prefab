@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6764965259558184389}
   - component: {fileID: 8792446243990278415}
   - component: {fileID: -7175087311880829711}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tree round foliage
   m_TagString: Untagged
   m_Icon: {fileID: 0}

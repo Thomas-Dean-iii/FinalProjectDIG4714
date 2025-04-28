@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2766589739277732312}
   - component: {fileID: 108106166477995282}
   - component: {fileID: 33670022190238138}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: deciduous tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}

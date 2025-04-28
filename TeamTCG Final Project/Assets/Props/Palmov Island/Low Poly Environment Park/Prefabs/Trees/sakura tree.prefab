@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8126270087975674640}
   - component: {fileID: 6278784098370377690}
   - component: {fileID: -3098844455608088056}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: sakura tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}

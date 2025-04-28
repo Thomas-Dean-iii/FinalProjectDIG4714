@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1626665891860606362}
   - component: {fileID: 3564567543337752912}
   - component: {fileID: 3428702824213848708}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: japanese deciduous tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}

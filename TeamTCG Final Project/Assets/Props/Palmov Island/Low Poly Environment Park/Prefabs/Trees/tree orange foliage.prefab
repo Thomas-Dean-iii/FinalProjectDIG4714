@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6543654262791837558}
   - component: {fileID: 9019388063507112892}
   - component: {fileID: 2615356655206971586}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tree orange foliage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
