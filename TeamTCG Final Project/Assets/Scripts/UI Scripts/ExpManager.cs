@@ -38,7 +38,16 @@ public class ExpManager : MonoBehaviour, IDataPersistence
             GainExperience(10); // gain 10 exp when E is pressed
         }
     }
-    
+
+    private void OnEnable()
+    {
+        ExperienceGem.OnCollectibleCollectedEvent += GainExperience;
+    }
+    private void OnDisable()
+    {
+        ExperienceGem.OnCollectibleCollectedEvent -= GainExperience;
+    }
+
     public void GainExperience(int amount)
     {
         currentExp += amount; 
