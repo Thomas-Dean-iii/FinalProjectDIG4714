@@ -8,6 +8,7 @@ public class ChunkManager : MonoBehaviour
     public Transform player;
     public int chunkRadius = 2; // How many chunks around the player
     public Vector2 chunkSize = new Vector2(50f, 50f);
+    public RuntimeNavMeshManager navMeshManager; // Reference to the NavMeshManager
 
     private Dictionary<Vector2Int, GameObject> activeChunks = new Dictionary<Vector2Int, GameObject>();
     private Vector2Int currentPlayerChunk;
@@ -55,6 +56,9 @@ public class ChunkManager : MonoBehaviour
                     );
                     GameObject newChunk = Instantiate(chunkPrefab, position, Quaternion.identity);
                     activeChunks.Add(chunkCoord, newChunk);
+
+                    // After a chunk is spawned, rebuild the NavMesh.
+                    navMeshManager.RebuildNavMesh();
                 }
             }
         }

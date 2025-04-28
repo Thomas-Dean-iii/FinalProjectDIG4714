@@ -182,3 +182,9 @@ MonoBehaviour:
   mediumCount: 10
   rareCount: 5
   chunkSize: {x: 50, y: 50}
+  minDistanceBetweenProps: 3
+  maxPlacementAttempts: 30
+  maxPhysicsOverlapRetries: 3
+  propLayerMask:
+    serializedVersion: 2
+    m_Bits: 128

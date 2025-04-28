@@ -4139,6 +4139,7 @@ MonoBehaviour:
   player: {fileID: 436694909}
   chunkRadius: 2
   chunkSize: {x: 50, y: 50}
+  navMeshManager: {fileID: 2026617551}
 --- !u!4 &2026617550
 Transform:
   m_ObjectHideFlags: 0
