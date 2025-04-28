@@ -54,6 +54,7 @@ public class PlayerAbilities : MonoBehaviour
                     abilityOne.Activate();
                     state1 = AbilityOneState.active;
                     activeTime = abilityOne.activeTime;
+                    Debug.Log("Spawning Balloon");
                 }
                 break;
             case AbilityOneState.active:
@@ -87,6 +88,7 @@ public class PlayerAbilities : MonoBehaviour
                     abilityTwo.Activate();
                     state2 = AbilityTwoState.active;
                     activeTime = abilityOne.activeTime;
+                    Debug.Log("Spawning Pinata");
                 }
                 break;
             case AbilityTwoState.active:
@@ -117,9 +119,10 @@ public class PlayerAbilities : MonoBehaviour
             case AbilityThreeState.ready:
                 if (Input.GetKeyDown(key3))
                 {
-                    abilityOne.Activate();
+                    abilityThree.Activate();
                     state3 = AbilityThreeState.active;
-                    activeTime = abilityOne.activeTime;
+                    activeTime = abilityThree.activeTime;
+                    Debug.Log("Spawning Water Gun");
                 }
                 break;
             case AbilityThreeState.active:
@@ -130,7 +133,7 @@ public class PlayerAbilities : MonoBehaviour
                 else
                 {
                     state3 = AbilityThreeState.cooldown;
-                    cooldownTime = abilityOne.cooldownTime;
+                    cooldownTime = abilityThree.cooldownTime;
                 }
                 break;
             case AbilityThreeState.cooldown:

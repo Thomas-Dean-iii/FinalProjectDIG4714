@@ -628,11 +628,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   abilityOne: {fileID: 11400000, guid: 226784ea5719abd4496f086b2172a641, type: 2}
-  abilityTwo: {fileID: 0}
-  abilityThree: {fileID: 0}
+  abilityTwo: {fileID: 11400000, guid: 9896b69f39af71b40acb7259ec865e58, type: 2}
+  abilityThree: {fileID: 11400000, guid: 743776146095c134cb9ba0c8c53fb989, type: 2}
   key1: 304
-  key2: 0
-  key3: 0
+  key2: 306
+  key3: 308
 --- !u!114 &7791042243441373953
 MonoBehaviour:
   m_ObjectHideFlags: 0
