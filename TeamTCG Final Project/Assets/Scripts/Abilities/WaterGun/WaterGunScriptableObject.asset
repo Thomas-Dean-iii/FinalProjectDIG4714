@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 678e67319b60ba3458193852b3726fb3, type: 3}
+  m_Name: WaterGunScriptableObject
+  m_EditorClassIdentifier: 
+  name: 
+  cooldownTime: 0
+  activeTime: 0
+  myWaterGun1: {fileID: 154334059357690100, guid: b355684f9ac16644ab016bf42777b1de, type: 3}
+  myWaterGun2: {fileID: 8264858864618583204, guid: efe21450febead447927fbfb0ff10a10, type: 3}
+  myWaterGun3: {fileID: 1107005219922770928, guid: cca0e3da966e36140b973776b7a40656, type: 3}
+  target: {fileID: 0}
+  firingSpeed: 0

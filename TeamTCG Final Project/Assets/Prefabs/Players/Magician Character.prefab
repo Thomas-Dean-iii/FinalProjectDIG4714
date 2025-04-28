@@ -485,6 +485,9 @@ PrefabInstance:
       addedObject: {fileID: 7392195354580832639}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3bc27f2f62f56aa44ac36daacdbe074f, type: 3}
       insertIndex: -1
+      addedObject: {fileID: -6116818617077093165}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3bc27f2f62f56aa44ac36daacdbe074f, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 4208407549118742595}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3bc27f2f62f56aa44ac36daacdbe074f, type: 3}
       insertIndex: -1
@@ -583,6 +586,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0057042106, y: 0.010095814, z: 0.0051428988}
   m_Center: {x: 0.0005868428, y: 0.0051478758, z: 0.00014650605}
+--- !u!114 &-6116818617077093165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5313416567369727740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e181bbbd27ceef64c8e7b66365c4ff5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilityOne: {fileID: 11400000, guid: dda5e0aa0e0538547b7d60da7668876b, type: 2}
+  abilityTwo: {fileID: 11400000, guid: ff8912208b7746740ac11bde6172fc22, type: 2}
+  abilityThree: {fileID: 11400000, guid: 1254996739f034b45979c15757c49450, type: 2}
+  key1: 304
+  key2: 306
+  key3: 308
 --- !u!114 &4208407549118742595
 MonoBehaviour:
   m_ObjectHideFlags: 0
