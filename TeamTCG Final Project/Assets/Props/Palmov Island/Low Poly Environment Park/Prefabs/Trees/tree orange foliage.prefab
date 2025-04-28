@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 6543654262791837558}
   - component: {fileID: 9019388063507112892}
   - component: {fileID: 2615356655206971586}
-  m_Layer: 6
+  - component: {fileID: 1442372146662356700}
+  m_Layer: 7
   m_Name: tree orange foliage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,3 +107,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -9098399408976589136, guid: d5bd0a2277189ce4d8bcc85c6b7df6b2, type: 3}
+--- !u!208 &1442372146662356700
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7362173557240152681}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.1290001, y: 2.0700002, z: 1.087}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 2.0700002, z: 0}
+  m_TimeToStationary: 0.5

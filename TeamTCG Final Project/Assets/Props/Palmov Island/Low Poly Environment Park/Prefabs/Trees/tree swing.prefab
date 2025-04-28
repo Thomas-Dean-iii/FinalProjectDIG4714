@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 3592441416260034687}
   - component: {fileID: 5854384099235811748}
   - component: {fileID: 7190642138877827507}
-  m_Layer: 6
+  - component: {fileID: 8479843948558043593}
+  m_Layer: 7
   m_Name: tree swing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,3 +107,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 1838345477345590320, guid: b2f2da6f776cbcd4e861abcf56e62b1b, type: 3}
+--- !u!208 &8479843948558043593
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966127837282447140}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 2.2740002, y: 2.4390001, z: 1.488}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 2.4390001, z: 0}
+  m_TimeToStationary: 0.5

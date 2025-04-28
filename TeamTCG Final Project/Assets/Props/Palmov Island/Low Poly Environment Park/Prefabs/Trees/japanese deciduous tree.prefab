@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 1626665891860606362}
   - component: {fileID: 3564567543337752912}
   - component: {fileID: 3428702824213848708}
-  m_Layer: 6
+  - component: {fileID: 914914193803529317}
+  m_Layer: 7
   m_Name: japanese deciduous tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,3 +107,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 969407306113353041, guid: 98b6f40612be1ed428692ea226916db8, type: 3}
+--- !u!208 &914914193803529317
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3059948811161385093}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.94400007, y: 1.71, z: 0.96700007}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 1.71, z: 0}
+  m_TimeToStationary: 0.5

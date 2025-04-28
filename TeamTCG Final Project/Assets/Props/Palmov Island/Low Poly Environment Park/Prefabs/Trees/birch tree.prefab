@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 4582817031423407253}
   - component: {fileID: 1764734333623124063}
   - component: {fileID: 4436428550958069518}
-  m_Layer: 6
+  - component: {fileID: 7608005850398756052}
+  m_Layer: 7
   m_Name: birch tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,3 +107,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4702425690004313313, guid: a9aed04247f22704d9a0d33686def64f, type: 3}
+--- !u!208 &7608005850398756052
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 251468165956329866}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.3330001, y: 2.2540002, z: 1.3850001}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 2.2540002, z: 0}
+  m_TimeToStationary: 0.5
