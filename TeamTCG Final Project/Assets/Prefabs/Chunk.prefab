@@ -165,6 +165,8 @@ MonoBehaviour:
   - {fileID: 6991265809765871834, guid: fea69626389bd194daaf921d168eefe7, type: 3}
   - {fileID: 7362173557240152681, guid: 7a3134ee04abb294291489477a09cec4, type: 3}
   - {fileID: 3059948811161385093, guid: 29d299ac32b5f83489084748c806a29b, type: 3}
+  - {fileID: 8973685557090966380, guid: 43082a9cc7cb93c41a67995ac5fb634f, type: 3}
+  - {fileID: 2129962789829678661, guid: b296fad068aab2448867e8677604bd0e, type: 3}
   rareProps:
   - {fileID: 3203034365504353905, guid: 4f159ea8bd6b086499cb23e130f86258, type: 3}
   - {fileID: 8809811768448255789, guid: f878658e9b913ac46a05e1ba1ed361dd, type: 3}
@@ -175,13 +177,8 @@ MonoBehaviour:
   - {fileID: 4400767916217534255, guid: 13d50c089f6819b458bd2d0221e63202, type: 3}
   - {fileID: 8446902826288895648, guid: e30bc770ec101854c8f1502b32aa42e5, type: 3}
   - {fileID: 6301488176788299976, guid: 74a1851edd9860e45beb0bccfb9e3ecf, type: 3}
+  - {fileID: 1280033625646196807, guid: 79e2968ffb7729e408ca50262fe341f9, type: 3}
   frequentCount: 500
   mediumCount: 10
   rareCount: 5
   chunkSize: {x: 50, y: 50}
-  minDistanceBetweenProps: 3
-  maxPlacementAttempts: 10
-  maxPhysicsOverlapRetries: 3
-  propLayerMask:
-    serializedVersion: 2
-    m_Bits: 128
