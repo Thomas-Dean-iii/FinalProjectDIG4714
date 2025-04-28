@@ -11,6 +11,11 @@ public class PlayerHealth : MonoBehaviour
     public Image healthBar;
     public GameObject playerOBJ;
 
+    private bool isDead;
+
+    public GameManagerScript gameManager;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,9 +37,12 @@ public class PlayerHealth : MonoBehaviour
 
     public void Death()
     {
-        if(currentHealth <= 0)
+        if (currentHealth <= 0 && !isDead)
         {
-            Destroy(playerOBJ);
+            isDead = true;
+            gameManager.gameOver();
+
         }
     }
 }
+

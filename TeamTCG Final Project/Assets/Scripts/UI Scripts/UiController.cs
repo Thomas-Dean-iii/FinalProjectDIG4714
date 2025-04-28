@@ -8,13 +8,14 @@ public class UiController : MonoBehaviour
 {
     public static UiController instance;
 
+    public GameObject winScreenMenu;
+
     private void Awake()
     {
         instance = this;
     }
 
-    public Slider explvlSlider;
-    public TMP_Text expLvlText;
+    public TMP_Text timerText;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -29,14 +30,30 @@ public class UiController : MonoBehaviour
 
     }
 
-    public void UpdateExperience(int currentExp, int levelExp, int currentLvl)
+    public void UpdateTimer(float time)
     {
-        explvlSlider.maxValue = levelExp;
-        explvlSlider.value = currentExp;
+        float minutes = Mathf.FloorToInt(time / 60f); // 60 seconds in a minute
+        float seconds = Mathf.FloorToInt(time % 60f);
 
-        expLvlText.text = "Level: " + currentLvl;
+        timerText.text = "Time: " + minutes + ":" + seconds.ToString("00");
+
+        if (time >= 300f) // Check if timer has hit 5 minutes, if so show win screen
+        {
+            ShowWinScreen();
+        }
     }
+
+    public void ShowWinScreen()
+    {
+        if (winScreenMenu != null)
+        {
+            winScreenMenu.SetActive(true);
+        }
+    }
+
 }
+
+
 
    
 
