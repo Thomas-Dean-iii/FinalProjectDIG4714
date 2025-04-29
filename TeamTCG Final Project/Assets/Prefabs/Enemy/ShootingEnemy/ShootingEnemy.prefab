@@ -1584,13 +1584,13 @@ MonoBehaviour:
   drops:
   - name: 
     itemPrefab: {fileID: 5349059842377526068, guid: e8cd2f2e7ed7ebc4a86e0a1afe7c1463, type: 3}
-    dropRate: 0
+    dropRate: 10
   - name: 
     itemPrefab: {fileID: 8241760363351819363, guid: cb2de65a645a67a46b906d2780af199c, type: 3}
-    dropRate: 0
+    dropRate: 30
   - name: 
     itemPrefab: {fileID: 1835646110339014596, guid: 3e8b7d1f61dcd3c4fa4facf425c3839c, type: 3}
-    dropRate: 0
+    dropRate: 50
 --- !u!1 &9012906451499103419
 GameObject:
   m_ObjectHideFlags: 0
