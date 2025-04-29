@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 5857802382846682086}
   - component: {fileID: 3037108825122722065}
   - component: {fileID: 5590008536206329121}
+  - component: {fileID: 5716831935356817238}
   m_Layer: 0
   m_Name: Balloon 1
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -98,3 +99,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 100
   target: {fileID: 0}
+--- !u!135 &5716831935356817238
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2346095561133664942}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.26932
+  m_Center: {x: -0.000000052154064, y: 0.013823494, z: 0}

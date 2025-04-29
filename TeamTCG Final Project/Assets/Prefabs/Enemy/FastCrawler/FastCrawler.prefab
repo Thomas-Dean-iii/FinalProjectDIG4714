@@ -465,6 +465,7 @@ GameObject:
   - component: {fileID: 3699593785228387985}
   - component: {fileID: 4231248860163113996}
   - component: {fileID: 969586024815811277}
+  - component: {fileID: -8453078093663766078}
   m_Layer: 0
   m_Name: FastCrawler
   m_TagString: Untagged
@@ -570,6 +571,18 @@ MonoBehaviour:
   player: {fileID: 0}
   playerHealth: {fileID: 0}
   damage: 15
+--- !u!114 &-8453078093663766078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1280033625646196807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7effcf5cfe886a641845f0ac85504de7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1360648421508288542
 GameObject:
   m_ObjectHideFlags: 0

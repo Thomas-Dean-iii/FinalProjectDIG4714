@@ -70,5 +70,4 @@ public class ShootingEnemy : MonoBehaviour
         Destroy(bulletObj, 5f);
     }
 
-
 }
