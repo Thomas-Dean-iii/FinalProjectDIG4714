@@ -22,6 +22,8 @@ public class ShootingEnemy : MonoBehaviour
 
     private void Update()
     {
+        FacePlayer();
+
         if (CanShoot == true)
         {
             ShootAtPlayer();
@@ -53,6 +55,20 @@ public class ShootingEnemy : MonoBehaviour
         delay = 2;
     }
 
+    private void FacePlayer()
+    {
+        if (GameObject.FindWithTag("Player") != null)
+        {
+            Vector3 direction = GameObject.FindWithTag("Player").transform.position - transform.position;
+            direction.y = 0f; // Ignore vertical (y-axis) difference
+            if (direction.magnitude > 0.1f)
+            {
+                Quaternion rotation = Quaternion.LookRotation(direction);
+                transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * 10f);
+            }
+        }
+    }
+
     void ShootAtPlayer()
     {
         bulletTime -= Time.deltaTime; //decrease bullet time
@@ -69,6 +85,4 @@ public class ShootingEnemy : MonoBehaviour
         bulletRig.AddForce(bulletRig.transform.forward * enemySpeed); //shooting the projectile
         Destroy(bulletObj, 5f);
     }
-
-
 }

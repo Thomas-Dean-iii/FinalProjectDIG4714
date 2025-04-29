@@ -167,7 +167,7 @@ MonoBehaviour:
   - {fileID: 3059948811161385093, guid: 29d299ac32b5f83489084748c806a29b, type: 3}
   rareProps:
   - {fileID: 3203034365504353905, guid: 4f159ea8bd6b086499cb23e130f86258, type: 3}
-  - {fileID: 8809811768448255789, guid: f878658e9b913ac46a05e1ba1ed361dd, type: 3}
+  - {fileID: 3759687294521085251, guid: 6be431fdad396504d985a7e688c217b2, type: 3}
   - {fileID: 5837590093756738923, guid: 168f4f8fb164f8b40bc62f75f74c4ece, type: 3}
   - {fileID: 5384659613586597020, guid: 878e6773092fb0347807d2d7cc6a9b97, type: 3}
   - {fileID: 6049731926808620849, guid: 94b45810c070e684b9e4218ef79fb992, type: 3}
@@ -178,12 +178,6 @@ MonoBehaviour:
   frequentCount: 500
   mediumCount: 10
   rareCount: 5
-  basicEnemyPrefab: {fileID: 2129962789829678661, guid: b296fad068aab2448867e8677604bd0e, type: 3}
-  shootingEnemyPrefab: {fileID: 8973685557090966380, guid: 43082a9cc7cb93c41a67995ac5fb634f, type: 3}
-  crawlingEnemyPrefab: {fileID: 1280033625646196807, guid: 79e2968ffb7729e408ca50262fe341f9, type: 3}
-  basicEnemyCount: 5
-  shootingEnemyCount: 2
-  crawlingEnemyCount: 1
   chunkSize: {x: 50, y: 50}
   minDistanceBetweenProps: 3
   maxPlacementAttempts: 30

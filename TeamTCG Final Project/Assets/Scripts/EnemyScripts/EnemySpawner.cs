@@ -18,9 +18,11 @@ public class EnemySpawner : MonoBehaviour
     public LayerMask enemyLayerMask;
     public float minDistanceBetweenEnemies = 5f;
     public int maxAttempts = 30;
+    public float spawnDelay = 0.1f; // delay between spawns to prevent lag
 
     private List<Vector3> spawnedPositions = new List<Vector3>();
     private Transform player;
+    private Transform enemyContainer;
 
     void Start()
     {
@@ -37,22 +39,29 @@ public class EnemySpawner : MonoBehaviour
                 player = playerObj.transform;
                 break;
             }
-            yield return null; // Wait a frame and try again
+            yield return null;
         }
 
-        SpawnEnemies();
+        GameObject containerObj = GameObject.Find("EnemyContainer");
+        if (containerObj == null)
+        {
+            containerObj = new GameObject("EnemyContainer");
+        }
+        enemyContainer = containerObj.transform;
+
+        StartCoroutine(SpawnEnemiesGradually());
     }
 
-    void SpawnEnemies()
+    IEnumerator SpawnEnemiesGradually()
     {
-        SpawnEnemyType(basicEnemyPrefab, basicEnemyCount);
-        SpawnEnemyType(shootingEnemyPrefab, shootingEnemyCount);
-        SpawnEnemyType(crawlingEnemyPrefab, crawlingEnemyCount);
+        yield return StartCoroutine(SpawnEnemyType(basicEnemyPrefab, basicEnemyCount));
+        yield return StartCoroutine(SpawnEnemyType(shootingEnemyPrefab, shootingEnemyCount));
+        yield return StartCoroutine(SpawnEnemyType(crawlingEnemyPrefab, crawlingEnemyCount));
     }
 
-    void SpawnEnemyType(GameObject enemyPrefab, int count)
+    IEnumerator SpawnEnemyType(GameObject enemyPrefab, int count)
     {
-        if (enemyPrefab == null) return;
+        if (enemyPrefab == null) yield break;
 
         for (int i = 0; i < count; i++)
         {
@@ -79,7 +88,7 @@ public class EnemySpawner : MonoBehaviour
                 if (tooClose)
                     continue;
 
-                GameObject enemy = Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+                GameObject enemy = Instantiate(enemyPrefab, spawnPosition, Quaternion.identity, enemyContainer);
                 enemy.transform.rotation = Quaternion.Euler(0f, Random.Range(0f, 360f), 0f);
 
                 spawnedPositions.Add(spawnPosition);
@@ -91,6 +100,8 @@ public class EnemySpawner : MonoBehaviour
             {
                 Debug.LogWarning($"Failed to spawn {enemyPrefab.name} after {maxAttempts} attempts.");
             }
+
+            yield return new WaitForSeconds(spawnDelay); // <- Wait a bit before next enemy to reduce lag
         }
     }
 }
