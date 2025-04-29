@@ -2283,6 +2283,7 @@ MonoBehaviour:
     m_Bits: 1
   minDistanceBetweenEnemies: 5
   maxAttempts: 30
+  waveGap: 15
 --- !u!114 &2026617555
 MonoBehaviour:
   m_ObjectHideFlags: 0
