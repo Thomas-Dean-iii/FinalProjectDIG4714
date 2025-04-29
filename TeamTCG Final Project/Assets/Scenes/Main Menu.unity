@@ -218,6 +218,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: LoadGame
       objectReference: {fileID: 0}
+    - target: {fileID: 5849026094317931306, guid: 2434f6b65293c084c9bc4b47c84869e6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 405689065}
+    - target: {fileID: 5849026094317931306, guid: 2434f6b65293c084c9bc4b47c84869e6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitGame
+      objectReference: {fileID: 0}
     - target: {fileID: 7728267472345755415, guid: 2434f6b65293c084c9bc4b47c84869e6, type: 3}
       propertyPath: m_Name
       value: Final Home Menu Canvas
