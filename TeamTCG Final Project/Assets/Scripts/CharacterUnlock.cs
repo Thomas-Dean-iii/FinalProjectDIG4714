@@ -61,7 +61,7 @@ public class CharacterUnlock : MonoBehaviour, IDataPersistence
     }
 
     int xp = playerStats.level;
-    Debug.Log("Player Level: " + xp);
+    //Debug.Log("Player Level: " + xp);
 
     // Unlock character 1 when reaching level 10
     if (xp >= 10 && characterAt < 1)
