@@ -36,7 +36,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 76.6, y: 57.2}
+  m_AnchoredPosition: {x: -13, y: 14}
   m_SizeDelta: {x: 122.1712, y: 151.0936}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6140965199036924832
@@ -120,7 +120,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6644023735236780656}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: LevelUpButton, Assembly-CSharp
+        m_MethodName: BoostIcon
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1993502157105685379
 GameObject:
   m_ObjectHideFlags: 0
@@ -155,10 +167,10 @@ RectTransform:
   - {fileID: 795366943309733436}
   m_Father: {fileID: 643590666138548575}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -163, y: -70}
-  m_SizeDelta: {x: 127.7943, y: 108.11}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 140, y: 12}
+  m_SizeDelta: {x: 127.79431, y: 108.11}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8985175588772670823
 CanvasRenderer:
@@ -241,7 +253,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6285264342341681707}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: LevelUpButton, Assembly-CSharp
+        m_MethodName: BoostIcon
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4248473055062783721
 GameObject:
   m_ObjectHideFlags: 0
@@ -544,9 +568,9 @@ RectTransform:
   - {fileID: 6847744087766426025}
   m_Father: {fileID: 643590666138548575}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 340.1, y: -45.6}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -155, y: 4}
   m_SizeDelta: {x: 160, y: 84.109}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &315431762124472910
@@ -630,7 +654,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2771547442881160850}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: LevelUpButton, Assembly-CSharp
+        m_MethodName: BoostIcon
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7841090210259765456
 GameObject:
   m_ObjectHideFlags: 0
@@ -648,7 +684,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &643590666138548575
 RectTransform:
   m_ObjectHideFlags: 0
@@ -699,7 +735,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f2b429458b364bd46ad993f3dc5ce521, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b9476525beead2040852dbfaf3f8b4a3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
