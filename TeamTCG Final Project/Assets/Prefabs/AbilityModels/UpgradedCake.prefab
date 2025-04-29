@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8790052162896757991}
   - component: {fileID: 3145679872969216583}
   - component: {fileID: 4330221460200043652}
+  - component: {fileID: 7300064561088401476}
   m_Layer: 0
   m_Name: UpgradedCake
   m_TagString: Untagged
@@ -30,8 +31,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -16.703, y: -0.271, z: 8.415}
-  m_LocalScale: {x: 3.9333858, y: 3.9333858, z: 3.9333858}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 6.32, y: 6.32, z: 6.32}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -98,6 +99,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detonationTime: 3
+  Confetti1: {fileID: 4938095755617958529, guid: 2e79f16be10fbd14f8d5ef191f8db4aa, type: 3}
+  Confetti2: {fileID: 5700784828077083704, guid: ed962e35f7fa6f34f8d27aa6d19ea293, type: 3}
+  CakeMesh: {fileID: 8790052162896757991}
 --- !u!135 &4330221460200043652
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -117,5 +121,32 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 1.4
+  m_Radius: 1
   m_Center: {x: 0, y: 0.10918963, z: -0.0006361529}
+--- !u!54 &7300064561088401476
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4673499826952187967}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0

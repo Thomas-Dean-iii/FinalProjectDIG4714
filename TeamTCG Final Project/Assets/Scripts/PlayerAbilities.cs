@@ -28,7 +28,7 @@ public class PlayerAbilities : MonoBehaviour
     enum AbilityTwoState
     {
         //list of states for Ability Two
-        ready,
+        inactive,
         active,
         cooldown
     }
@@ -42,7 +42,7 @@ public class PlayerAbilities : MonoBehaviour
     }
 
     AbilityOneState state1 = AbilityOneState.inactive;
-    AbilityTwoState state2 = AbilityTwoState.ready;
+    AbilityTwoState state2 = AbilityTwoState.inactive;
     AbilityThreeState state3 = AbilityThreeState.inactive;
 
     //key inputs to test abilities
@@ -87,15 +87,6 @@ public class PlayerAbilities : MonoBehaviour
         //Handles state for Ability 2
         switch (state2)
         {
-            case AbilityTwoState.ready:
-                if (Input.GetKeyDown(key2))
-                {
-                    abilityTwo.Activate(abilityTwoLevel);
-                    state2 = AbilityTwoState.active;
-                    A2activeTime = abilityTwo.activeTime;
-                    Debug.Log("Spawning Pinata");
-                }
-                break;
             case AbilityTwoState.active:
                 if (A2activeTime > 0)
                 {
@@ -114,7 +105,15 @@ public class PlayerAbilities : MonoBehaviour
                 }
                 else
                 {
-                    state2 = AbilityTwoState.ready;
+                    abilityTwo.Activate(abilityTwoLevel);
+                    state2 = AbilityTwoState.active;
+                    A2activeTime = abilityTwo.activeTime;
+                }
+                break;
+            case AbilityTwoState.inactive:
+                if (abilityTwoLevel > 0)
+                {
+                    state2 = AbilityTwoState.active;
                 }
                 break;
         }
