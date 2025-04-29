@@ -41,7 +41,7 @@ public class PlayerAbilities : MonoBehaviour
 
     public int abilityOneLevel = 1;
     public int abilityTwoLevel = 1;
-    public int abilityThreeLevel = 1;
+    public int abilityThreeLevel = 3;
 
 
     //key inputs to test abilities
