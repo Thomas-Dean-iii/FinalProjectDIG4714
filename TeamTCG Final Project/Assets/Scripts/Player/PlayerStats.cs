@@ -7,7 +7,7 @@ public class PlayerStats : MonoBehaviour
 {
     public CharacterScriptableObject charaterData;
 
-    float currentHealth;
+   public float currentHealth;
     float currentRecovery;
     float currentMoveSpeed;
     float currentMight;

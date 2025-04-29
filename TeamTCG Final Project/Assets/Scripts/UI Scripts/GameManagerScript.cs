@@ -5,11 +5,25 @@ using UnityEngine;
 public class GameManagerScript : MonoBehaviour
 {
     public GameObject gameOverUI;
+    public PlayerStats playerStats;
    
-    public void gameOver()
+    private void Update()
     {
-        gameOverUI.SetActive(true);
-        Time.timeScale = 0;
+        if(playerStats == null)
+        {
+            playerStats = FindObjectOfType<PlayerStats>();
+        }
+        GameOver();
+
+
+    }
+    public void GameOver()
+    {
+        if(playerStats.currentHealth <= 0)
+        {
+            gameOverUI.SetActive(true);
+            Time.timeScale = 0;
+        }
     }
 
 }
