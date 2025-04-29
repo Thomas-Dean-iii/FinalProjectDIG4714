@@ -590,6 +590,7 @@ GameObject:
   - component: {fileID: 1781412846584028427}
   - component: {fileID: 3808445471962556295}
   - component: {fileID: -4581142211358269676}
+  - component: {fileID: 5240822195298034441}
   m_Layer: 0
   m_Name: BasicEnemy
   m_TagString: Untagged
@@ -707,6 +708,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7effcf5cfe886a641845f0ac85504de7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5240822195298034441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2129962789829678661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8bd9c0ee73bd00409d6f2c4a5caf051, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drops:
+  - name: 
+    itemPrefab: {fileID: 5349059842377526068, guid: e8cd2f2e7ed7ebc4a86e0a1afe7c1463, type: 3}
+    dropRate: 0
+  - name: 
+    itemPrefab: {fileID: 8241760363351819363, guid: cb2de65a645a67a46b906d2780af199c, type: 3}
+    dropRate: 0
+  - name: 
+    itemPrefab: {fileID: 1835646110339014596, guid: 3e8b7d1f61dcd3c4fa4facf425c3839c, type: 3}
+    dropRate: 0
 --- !u!1 &2443702184587176693
 GameObject:
   m_ObjectHideFlags: 0
