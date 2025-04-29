@@ -6,12 +6,13 @@ public class ChunkManager : MonoBehaviour
 {
     public GameObject chunkPrefab;
     public Transform player;
-    public int chunkRadius = 2; // How many chunks around the player
+    public int chunkRadius = 2;
     public Vector2 chunkSize = new Vector2(50f, 50f);
-    public RuntimeNavMeshManager navMeshManager; // Reference to the NavMeshManager
+    public RuntimeNavMeshManager navMeshManager;
 
     private Dictionary<Vector2Int, GameObject> activeChunks = new Dictionary<Vector2Int, GameObject>();
     private Vector2Int currentPlayerChunk;
+    private bool isUpdatingChunks = false;
 
     void Start()
     {
@@ -38,6 +39,14 @@ public class ChunkManager : MonoBehaviour
 
     void UpdateChunks(bool forceInit = false)
     {
+        if (!isUpdatingChunks)
+            StartCoroutine(SpawnChunksCoroutine());
+    }
+
+    IEnumerator SpawnChunksCoroutine()
+    {
+        isUpdatingChunks = true;
+
         HashSet<Vector2Int> newChunks = new HashSet<Vector2Int>();
 
         for (int x = -chunkRadius; x <= chunkRadius; x++)
@@ -57,8 +66,7 @@ public class ChunkManager : MonoBehaviour
                     GameObject newChunk = Instantiate(chunkPrefab, position, Quaternion.identity);
                     activeChunks.Add(chunkCoord, newChunk);
 
-                    // After a chunk is spawned, rebuild the NavMesh.
-                    navMeshManager.RebuildNavMesh();
+                    yield return null; // wait 1 frame between chunk spawns to reduce lag
                 }
             }
         }
@@ -78,5 +86,10 @@ public class ChunkManager : MonoBehaviour
         {
             activeChunks.Remove(key);
         }
+
+        // After all chunks are spawned, rebuild the NavMesh once
+        navMeshManager.RebuildNavMesh();
+
+        isUpdatingChunks = false;
     }
 }
