@@ -1311,7 +1311,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: 0
   currentExp: 0
-  expToLevel: 250
+  expToLevel: 50
   expMultiplier: 1.4
   expSlider: {fileID: 17853946}
   currentLevelText: {fileID: 746478381}
