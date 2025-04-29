@@ -94,7 +94,7 @@ public class PlayerAbilities : MonoBehaviour
                 else
                 {
                     state2 = AbilityTwoState.cooldown;
-                    A2cooldownTime = abilityOne.cooldownTime;
+                    A2cooldownTime = abilityTwo.cooldownTime;
                 }
                 break;
             case AbilityTwoState.cooldown:

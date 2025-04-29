@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CakeScriptableObject
   m_EditorClassIdentifier: 
   name: 
-  cooldownTime: 8
+  cooldownTime: 5
   activeTime: 0
   myCake1: {fileID: 6869644998801841996, guid: 39bbca588cbc68d4eb4bea7399215e5b, type: 3}
   myCake2: {fileID: 4673499826952187967, guid: fe417de33e65ada4fa246c5717553246, type: 3}
