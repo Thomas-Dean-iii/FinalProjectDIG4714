@@ -35,11 +35,11 @@ public class PlayerAbilities : MonoBehaviour
     }
 
 
-    AbilityOneState state1 = AbilityOneState.ready;
+    AbilityOneState state1 = AbilityOneState.cooldown;
     AbilityTwoState state2 = AbilityTwoState.ready;
     AbilityThreeState state3 = AbilityThreeState.ready;
 
-    private int abilityOneLevel = 1;
+    private int abilityOneLevel = 3;
     private int abilityTwoLevel = 1;
     private int abilityThreeLevel = 1;
 
@@ -53,19 +53,15 @@ public class PlayerAbilities : MonoBehaviour
         //Handles state for Ability 1
         switch (state1)
         {
-            case AbilityOneState.ready:
-                if (Input.GetKeyDown(key1))
+            case AbilityOneState.active:
+                activeTime = 5f;
+                if (activeTime > 0)
                 {
+                    activeTime -= Time.deltaTime;
                     abilityOne.Activate(abilityOneLevel);
                     state1 = AbilityOneState.active;
                     activeTime = abilityOne.activeTime;
                     Debug.Log("Spawning Balloon");
-                }
-                break;
-            case AbilityOneState.active:
-                if (activeTime > 0)
-                {
-                    activeTime -= Time.deltaTime;
                 }
                 else
                 {
@@ -74,6 +70,7 @@ public class PlayerAbilities : MonoBehaviour
                 }
                 break;
             case AbilityOneState.cooldown:
+                cooldownTime = 3f;
                 if (cooldownTime > 0)
                 {
                     cooldownTime -= Time.deltaTime;
