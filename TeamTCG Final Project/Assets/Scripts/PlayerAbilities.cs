@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerAbilities : MonoBehaviour
@@ -7,13 +8,19 @@ public class PlayerAbilities : MonoBehaviour
     public Ability abilityOne;
     public Ability abilityTwo;
     public Ability abilityThree;
-    float cooldownTime;
-    float activeTime;
-
+    float A1cooldownTime;
+    float A1activeTime;
+    float A2cooldownTime;
+    float A2activeTime;
+    float A3cooldownTime;
+    float A3activeTime; 
+    private int abilityOneLevel = 1;
+    private int abilityTwoLevel = 1;
+    private int abilityThreeLevel = 1;
     enum AbilityOneState
     {
         //list of states for Ability One
-        ready,
+        inactive,
         active,
         cooldown
     }
@@ -29,64 +36,53 @@ public class PlayerAbilities : MonoBehaviour
     enum AbilityThreeState
     {
         //list of states for Ability Three
-        ready,
+        inactive,
         active,
         cooldown
     }
 
-
-    AbilityOneState state1 = AbilityOneState.ready;
+    AbilityOneState state1 = AbilityOneState.inactive;
     AbilityTwoState state2 = AbilityTwoState.ready;
-    AbilityThreeState state3 = AbilityThreeState.ready;
-
-    private int abilityOneLevel = 1;
-    private int abilityTwoLevel = 1;
-    private int abilityThreeLevel = 1;
-
+    AbilityThreeState state3 = AbilityThreeState.inactive;
 
     //key inputs to test abilities
     public KeyCode key2;
     public KeyCode key3;
     void Update()
     {
-        //Handles state for Ability 1
         switch (state1)
         {
-            /*case AbilityOneState.ready:
-                if ( > 0)
-                {
-                    abilityTwo.Activate(abilityTwoLevel);
-                    state2 = AbilityTwoState.active;
-                    activeTime = abilityOne.activeTime;
-                    Debug.Log("Spawning Pinata");
-                }
-                break;*/
             case AbilityOneState.active:
-                if (activeTime > 0)
+                if (A1activeTime > 0)
                 {
-                    activeTime -= Time.deltaTime;
-                    state1 = AbilityOneState.active;
-                    Debug.Log("Spawning Balloon");
+                    A1activeTime -= Time.deltaTime;
                 }
                 else
                 {
                     abilityOne.Deactivate(abilityOneLevel);
                     state1 = AbilityOneState.cooldown;
-                    cooldownTime = abilityOne.cooldownTime;
+                    A1cooldownTime = abilityOne.cooldownTime;
                 }
                 break;
             case AbilityOneState.cooldown:
-                if (cooldownTime > 0)
+                if (A1cooldownTime > 0)
                 {
-                    cooldownTime -= Time.deltaTime;
+                    A1cooldownTime -= Time.deltaTime;
                 }
                 else
                 {
                     abilityOne.Activate(abilityOneLevel);
                     state1 = AbilityOneState.active;
-                    activeTime = abilityOne.activeTime;
+                    A1activeTime = abilityOne.activeTime;
                 }
                 break;
+            case AbilityOneState.inactive:
+                if (abilityOneLevel > 0)
+                {
+                    state1 = AbilityOneState.active; ;
+                }
+                break;
+
         }
         //Handles state for Ability 2
         switch (state2)
@@ -96,25 +92,25 @@ public class PlayerAbilities : MonoBehaviour
                 {
                     abilityTwo.Activate(abilityTwoLevel);
                     state2 = AbilityTwoState.active;
-                    activeTime = abilityOne.activeTime;
+                    A2activeTime = abilityTwo.activeTime;
                     Debug.Log("Spawning Pinata");
                 }
                 break;
             case AbilityTwoState.active:
-                if (activeTime > 0)
+                if (A2activeTime > 0)
                 {
-                    activeTime -= Time.deltaTime;
+                    A2activeTime -= Time.deltaTime;
                 }
                 else
                 {
                     state2 = AbilityTwoState.cooldown;
-                    cooldownTime = abilityOne.cooldownTime;
+                    A2cooldownTime = abilityOne.cooldownTime;
                 }
                 break;
             case AbilityTwoState.cooldown:
-                if (cooldownTime > 0)
+                if (A2cooldownTime > 0)
                 {
-                    cooldownTime -= Time.deltaTime;
+                    A2cooldownTime -= Time.deltaTime;
                 }
                 else
                 {
@@ -125,34 +121,34 @@ public class PlayerAbilities : MonoBehaviour
         //Handles state for Ability 3
         switch (state3)
         {
-            case AbilityThreeState.ready:
-                if (Input.GetKeyDown(key3))
-                {
-                    abilityThree.Activate(abilityThreeLevel);
-                    state3 = AbilityThreeState.active;
-                    activeTime = abilityThree.activeTime;
-                    Debug.Log("Spawning Water Gun");
-                }
-                break;
             case AbilityThreeState.active:
-                if (activeTime > 0)
+                if (A3activeTime > 0)
                 {
-                    activeTime -= Time.deltaTime;
+                    A3activeTime -= Time.deltaTime;
                 }
                 else
                 {
+                    abilityThree.Deactivate(abilityThreeLevel);
                     state3 = AbilityThreeState.cooldown;
-                    cooldownTime = abilityThree.cooldownTime;
+                    A3cooldownTime = abilityThree.cooldownTime;
                 }
                 break;
             case AbilityThreeState.cooldown:
-                if (cooldownTime > 0)
+                if (A3cooldownTime > 0)
                 {
-                    cooldownTime -= Time.deltaTime;
+                    A3cooldownTime -= Time.deltaTime;
                 }
                 else
                 {
-                    state3 = AbilityThreeState.ready;
+                    abilityThree.Activate(abilityThreeLevel);
+                    state3 = AbilityThreeState.active;
+                    A3activeTime = abilityThree.activeTime;
+                }
+                break;
+            case AbilityThreeState.inactive:
+                if (abilityThreeLevel > 0)
+                {
+                    state3 = AbilityThreeState.active;
                 }
                 break;
         }
