@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: WaterGunScriptableObject
   m_EditorClassIdentifier: 
   name: 
-  cooldownTime: 5
+  cooldownTime: 2
   activeTime: 1
   myWaterGun1: {fileID: 154334059357690100, guid: b355684f9ac16644ab016bf42777b1de, type: 3}
   myWaterGun2: {fileID: 8264858864618583204, guid: efe21450febead447927fbfb0ff10a10, type: 3}

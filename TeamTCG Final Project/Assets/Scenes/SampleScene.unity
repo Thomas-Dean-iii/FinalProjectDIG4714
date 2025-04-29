@@ -2159,9 +2159,9 @@ MonoBehaviour:
   shootingEnemyPrefab: {fileID: 8973685557090966380, guid: 43082a9cc7cb93c41a67995ac5fb634f, type: 3}
   crawlingEnemyPrefab: {fileID: 1280033625646196807, guid: 79e2968ffb7729e408ca50262fe341f9, type: 3}
   spawnRadius: 50
-  basicEnemyCount: 10
-  shootingEnemyCount: 7
-  crawlingEnemyCount: 4
+  basicEnemyCount: 7
+  shootingEnemyCount: 4
+  crawlingEnemyCount: 2
   minDistanceFromPlayer: 25
   enemyLayerMask:
     serializedVersion: 2

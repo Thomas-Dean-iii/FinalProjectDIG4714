@@ -609,8 +609,8 @@ MonoBehaviour:
   abilityTwo: {fileID: 11400000, guid: fa0179d3d9c85e34ea56870c0396c11f, type: 2}
   abilityThree: {fileID: 11400000, guid: 1254996739f034b45979c15757c49450, type: 2}
   abilityOneLevel: 1
-  key2: 306
-  key3: 308
+  abilityTwoLevel: 0
+  abilityThreeLevel: 0
 --- !u!114 &4208407549118742595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -641,6 +641,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   charaterData: {fileID: 11400000, guid: 80a635656a6bb5b44a4c3bdaf5b587af, type: 2}
+  currentHealth: 0
   experience: 0
   level: 1
   experienceCap: 100

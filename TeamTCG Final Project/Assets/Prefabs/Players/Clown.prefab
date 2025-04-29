@@ -550,6 +550,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   charaterData: {fileID: 11400000, guid: 911b0fce79cefb945b7b5d3410384d5c, type: 2}
+  currentHealth: 0
   experience: 0
   level: 1
   experienceCap: 100
@@ -571,12 +572,9 @@ MonoBehaviour:
   abilityOne: {fileID: 11400000, guid: dda5e0aa0e0538547b7d60da7668876b, type: 2}
   abilityTwo: {fileID: 11400000, guid: fa0179d3d9c85e34ea56870c0396c11f, type: 2}
   abilityThree: {fileID: 11400000, guid: 1254996739f034b45979c15757c49450, type: 2}
-  abilityOneLevel: 1
-  abilityTwoLevel: 1
+  abilityOneLevel: 0
+  abilityTwoLevel: 0
   abilityThreeLevel: 1
-  key1: 304
-  key2: 306
-  key3: 308
 --- !u!54 &9107350679888902088
 Rigidbody:
   m_ObjectHideFlags: 0

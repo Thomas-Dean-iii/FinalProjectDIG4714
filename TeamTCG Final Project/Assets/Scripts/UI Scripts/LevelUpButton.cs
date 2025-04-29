@@ -15,7 +15,7 @@ public class LevelUpButton : MonoBehaviour
     private int WaterGunLevel;
     /*public void BoostIcon()
     {
-        Player = FindObjectOfType<PlayerAbilities>();
+
         if (levelUpScreen != null)
         {
             levelUpScreen.SetActive(false);
@@ -28,6 +28,9 @@ public class LevelUpButton : MonoBehaviour
     {
         Player = FindObjectOfType<PlayerAbilities>();
         BalloonLevel = Player.abilityOneLevel;
+        CakeLevel = Player.abilityTwoLevel;
+        WaterGunLevel = Player.abilityThreeLevel;
+
         if (BalloonLevel >= 3)
         {
             gameObject.SetActive(false);
@@ -36,6 +39,8 @@ public class LevelUpButton : MonoBehaviour
         {
             BalloonLevel++;
             Player.abilityOneLevel = BalloonLevel;
+            levelUpScreen.SetActive(false);
+            Time.timeScale = 1f;
         }
     }
     public void CakeIcon()
@@ -50,6 +55,8 @@ public class LevelUpButton : MonoBehaviour
         {
             CakeLevel++;
             Player.abilityTwoLevel = CakeLevel;
+            levelUpScreen.SetActive(false);
+            Time.timeScale = 1f;
         }
     }
     public void WatgerGunIcon()
@@ -64,6 +71,8 @@ public class LevelUpButton : MonoBehaviour
         {
             WaterGunLevel++;
             Player.abilityThreeLevel = WaterGunLevel;
+            levelUpScreen.SetActive(false);
+            Time.timeScale = 1f;
         }
     }
 }
