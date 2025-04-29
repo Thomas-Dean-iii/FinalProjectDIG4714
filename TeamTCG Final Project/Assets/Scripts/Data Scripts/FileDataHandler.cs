@@ -4,7 +4,7 @@ using UnityEngine;
 using System;
 using System.IO;
 
-public class FileDataHandler 
+public class FileDataHandler
 {
 
     private string dataDirPath = "";
@@ -34,7 +34,7 @@ public class FileDataHandler
                     }
                 }
 
-                loadedData = JsonUtility.FromJson<GameData>(dataToLoad); 
+                loadedData = JsonUtility.FromJson<GameData>(dataToLoad);
             }
             catch (Exception e)
             {
@@ -65,7 +65,7 @@ public class FileDataHandler
         catch (Exception e)
         {
             Debug.LogError("Could not create directory: " + fullPath + "/n" + e);
-            
+
         }
     }
 }
