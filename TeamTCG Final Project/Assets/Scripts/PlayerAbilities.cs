@@ -14,9 +14,9 @@ public class PlayerAbilities : MonoBehaviour
     float A2activeTime;
     float A3cooldownTime;
     float A3activeTime; 
-    private int abilityOneLevel = 0;
+    private int abilityOneLevel = 1;
     private int abilityTwoLevel = 1;
-    private int abilityThreeLevel = 0;
+    private int abilityThreeLevel = 1;
     enum AbilityOneState
     {
         //list of states for Ability One
