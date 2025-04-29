@@ -1181,9 +1181,149 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1638798192408642927, guid: cb4425c145d186145b3da1946fea70de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1638798192408642927, guid: cb4425c145d186145b3da1946fea70de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1638798192408642927, guid: cb4425c145d186145b3da1946fea70de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2026617555}
+    - target: {fileID: 1638798192408642927, guid: cb4425c145d186145b3da1946fea70de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1638798192408642927, guid: cb4425c145d186145b3da1946fea70de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BoostIcon
+      objectReference: {fileID: 0}
+    - target: {fileID: 1638798192408642927, guid: cb4425c145d186145b3da1946fea70de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LevelUpButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1638798192408642927, guid: cb4425c145d186145b3da1946fea70de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2294295971900825425, guid: cb4425c145d186145b3da1946fea70de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2294295971900825425, guid: cb4425c145d186145b3da1946fea70de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2294295971900825425, guid: cb4425c145d186145b3da1946fea70de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2026617555}
+    - target: {fileID: 2294295971900825425, guid: cb4425c145d186145b3da1946fea70de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2294295971900825425, guid: cb4425c145d186145b3da1946fea70de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BoostIcon
+      objectReference: {fileID: 0}
+    - target: {fileID: 2294295971900825425, guid: cb4425c145d186145b3da1946fea70de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LevelUpButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2294295971900825425, guid: cb4425c145d186145b3da1946fea70de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2976718527562236428, guid: cb4425c145d186145b3da1946fea70de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2976718527562236428, guid: cb4425c145d186145b3da1946fea70de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2976718527562236428, guid: cb4425c145d186145b3da1946fea70de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2026617555}
+    - target: {fileID: 2976718527562236428, guid: cb4425c145d186145b3da1946fea70de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2976718527562236428, guid: cb4425c145d186145b3da1946fea70de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BoostIcon
+      objectReference: {fileID: 0}
+    - target: {fileID: 2976718527562236428, guid: cb4425c145d186145b3da1946fea70de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LevelUpButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2976718527562236428, guid: cb4425c145d186145b3da1946fea70de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270168515085140073, guid: cb4425c145d186145b3da1946fea70de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270168515085140073, guid: cb4425c145d186145b3da1946fea70de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270168515085140073, guid: cb4425c145d186145b3da1946fea70de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2026617555}
+    - target: {fileID: 4270168515085140073, guid: cb4425c145d186145b3da1946fea70de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270168515085140073, guid: cb4425c145d186145b3da1946fea70de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BoostIcon
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270168515085140073, guid: cb4425c145d186145b3da1946fea70de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LevelUpButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270168515085140073, guid: cb4425c145d186145b3da1946fea70de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7841090210259765456, guid: cb4425c145d186145b3da1946fea70de, type: 3}
       propertyPath: m_Name
       value: LevelUpScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 8968502593250526371, guid: cb4425c145d186145b3da1946fea70de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8968502593250526371, guid: cb4425c145d186145b3da1946fea70de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8968502593250526371, guid: cb4425c145d186145b3da1946fea70de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2026617555}
+    - target: {fileID: 8968502593250526371, guid: cb4425c145d186145b3da1946fea70de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8968502593250526371, guid: cb4425c145d186145b3da1946fea70de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BoostIcon
+      objectReference: {fileID: 0}
+    - target: {fileID: 8968502593250526371, guid: cb4425c145d186145b3da1946fea70de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LevelUpButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8968502593250526371, guid: cb4425c145d186145b3da1946fea70de, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2021,6 +2161,7 @@ GameObject:
   - component: {fileID: 2026617551}
   - component: {fileID: 2026617553}
   - component: {fileID: 2026617554}
+  - component: {fileID: 2026617555}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2142,6 +2283,19 @@ MonoBehaviour:
     m_Bits: 1
   minDistanceBetweenEnemies: 5
   maxAttempts: 30
+--- !u!114 &2026617555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026617548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1a4a53d72e36fd489fe01a2bd4916e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelUpScreen: {fileID: 1228605940}
 --- !u!1 &2040446411
 GameObject:
   m_ObjectHideFlags: 0
