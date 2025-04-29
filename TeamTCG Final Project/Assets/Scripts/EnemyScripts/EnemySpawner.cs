@@ -18,6 +18,7 @@ public class EnemySpawner : MonoBehaviour
     public LayerMask enemyLayerMask;
     public float minDistanceBetweenEnemies = 5f;
     public int maxAttempts = 30;
+    public float waveGap = 0;
 
     private List<Vector3> spawnedPositions = new List<Vector3>();
     private Transform player;
@@ -40,7 +41,18 @@ public class EnemySpawner : MonoBehaviour
             yield return null; // Wait a frame and try again
         }
 
-        SpawnEnemies();
+        StartCoroutine(ConstantEnemeySpawn());
+    }
+
+    IEnumerator ConstantEnemeySpawn()
+    {
+        while (true)
+
+        {
+            SpawnEnemies();
+
+            yield return new WaitForSeconds(waveGap);
+        }
     }
 
     void SpawnEnemies()
