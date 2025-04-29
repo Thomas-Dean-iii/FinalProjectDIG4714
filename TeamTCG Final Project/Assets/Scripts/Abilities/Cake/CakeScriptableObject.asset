@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5faa55de1acc3194da11c717df8d795f, type: 3}
-  m_Name: PinataScriptableObject
+  m_Name: CakeScriptableObject
   m_EditorClassIdentifier: 
   name: 
   cooldownTime: 0
   activeTime: 0
-  myPinata1: {fileID: 6869644998801841996, guid: 39bbca588cbc68d4eb4bea7399215e5b, type: 3}
-  myPinata2: {fileID: 4673499826952187967, guid: fe417de33e65ada4fa246c5717553246, type: 3}
+  myCake1: {fileID: 6869644998801841996, guid: 39bbca588cbc68d4eb4bea7399215e5b, type: 3}
+  myCake2: {fileID: 4673499826952187967, guid: fe417de33e65ada4fa246c5717553246, type: 3}
   target: {fileID: 0}
