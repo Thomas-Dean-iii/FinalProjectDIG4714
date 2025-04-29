@@ -36,7 +36,7 @@ public class ExpManager : MonoBehaviour, IDataPersistence
     {
         if (Input.GetKeyDown(KeyCode.E)) // for testing purposes
         {
-            GainExperience(10); // gain 10 exp when E is pressed
+            GainExperience(100); // gain 10 exp when E is pressed
         }
     }
 
