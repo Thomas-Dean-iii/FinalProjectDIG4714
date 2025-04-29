@@ -11,7 +11,27 @@ public class PinataAbility : Ability
 
     public override void Activate(int level)
     {
-        target = FindObjectOfType<PlayerController>();
-        GameObject pinata = Instantiate(myPinata1, target.transform.position + new Vector3(3,0,0), Quaternion.identity) as GameObject;
+
+        if (level == 1)
+        {
+            target = FindObjectOfType<PlayerController>();
+            GameObject pinata = Instantiate(myPinata1, target.transform.position + new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
+        }
+        else if (level == 2)
+        {
+            target = FindObjectOfType<PlayerController>();
+            GameObject pinata1 = Instantiate(myPinata1, target.transform.position + new Vector3(1, 0, 0), Quaternion.identity) as GameObject;
+            GameObject pinata2 = Instantiate(myPinata1, target.transform.position + new Vector3(-1, 0, 0), Quaternion.identity) as GameObject;
+        }
+        else if (level == 3)
+        {
+            target = FindObjectOfType<PlayerController>();
+            GameObject pinata1 = Instantiate(myPinata2, target.transform.position + new Vector3(1, 0, 0), Quaternion.identity) as GameObject;
+            GameObject pinata2 = Instantiate(myPinata2, target.transform.position + new Vector3(-1, 0, 0), Quaternion.identity) as GameObject;
+        }
+        else
+        {
+            return;
+        }
     }
 }
