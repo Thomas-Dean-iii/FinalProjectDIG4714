@@ -12,16 +12,16 @@ public class DataPersistenceManager : MonoBehaviour
     private GameData gameData;
 
     private List<IDataPersistence> dataPersistenceObjects;
-   
-    private FileDataHandler dataHandler; 
-    
+
+    private FileDataHandler dataHandler;
+
     public static DataPersistenceManager instance { get; private set; }
 
-  
-    
+
+
     private void Awake()
     {
-        if(instance != null)
+        if (instance != null)
         {
             Debug.LogError("More than one DataPersistenceManager in the scene");
         }
@@ -42,7 +42,7 @@ public class DataPersistenceManager : MonoBehaviour
 
     public void LoadGame()
     {
-       this.gameData = dataHandler.Load(); // load the data from the file
+        this.gameData = dataHandler.Load(); // load the data from the file
 
         if (this.gameData == null) // if no data was found, initialize to new game
         {

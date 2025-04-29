@@ -4,15 +4,17 @@ using UnityEngine;
 
 [System.Serializable]
 
-public class GameData 
+public class GameData
 {
     public int level;
 
-    public Vector3 playerPostion;
+    public int playersUnlocked; // number of players unlocked
+
+
 
     public GameData() //starting values
     {
         this.level = 0;
-        playerPostion = Vector3.zero; //whatever the player's starting position is that's to be detrmined in hopefully a few hours
+        this.playersUnlocked = 0;
     }
 }
