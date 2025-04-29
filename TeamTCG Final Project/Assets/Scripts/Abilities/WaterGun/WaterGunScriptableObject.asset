@@ -17,6 +17,6 @@ MonoBehaviour:
   activeTime: 0
   myWaterGun1: {fileID: 154334059357690100, guid: b355684f9ac16644ab016bf42777b1de, type: 3}
   myWaterGun2: {fileID: 8264858864618583204, guid: efe21450febead447927fbfb0ff10a10, type: 3}
-  myWaterGun3: {fileID: 1107005219922770928, guid: cca0e3da966e36140b973776b7a40656, type: 3}
+  myWaterGun3: {fileID: 1679454625401967898, guid: 3e03de7381b7ac6409398b2604704b5c, type: 3}
   target: {fileID: 0}
   firingSpeed: 0
