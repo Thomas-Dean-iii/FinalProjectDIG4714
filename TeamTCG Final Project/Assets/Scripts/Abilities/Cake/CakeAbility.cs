@@ -11,23 +11,20 @@ public class CakeAbility : Ability
 
     public override void Activate(int level)
     {
-
+        target = FindObjectOfType<PlayerController>();
         if (level == 1)
         {
-            target = FindObjectOfType<PlayerController>();
             GameObject cake = Instantiate(myCake1, target.transform.position + new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
         }
         else if (level == 2)
         {
-            target = FindObjectOfType<PlayerController>();
-            GameObject cake1 = Instantiate(myCake1, target.transform.position + new Vector3(1, 0, 0), Quaternion.identity) as GameObject;
-            GameObject cake2 = Instantiate(myCake1, target.transform.position + new Vector3(-1, 0, 0), Quaternion.identity) as GameObject;
+            GameObject cake1 = Instantiate(myCake1, target.transform.position + new Vector3(1.5f, 0, 0), Quaternion.identity) as GameObject;
+            GameObject cake2 = Instantiate(myCake1, target.transform.position + new Vector3(-1.5f, 0, 0), Quaternion.identity) as GameObject;
         }
         else if (level == 3)
         {
-            target = FindObjectOfType<PlayerController>();
-            GameObject cake1 = Instantiate(myCake2, target.transform.position + new Vector3(1, 0, 0), Quaternion.identity) as GameObject;
-            GameObject cake2 = Instantiate(myCake2, target.transform.position + new Vector3(-1, 0, 0), Quaternion.identity) as GameObject;
+            GameObject cake1 = Instantiate(myCake2, target.transform.position + new Vector3(2, 0, 0), Quaternion.identity) as GameObject;
+            GameObject cake2 = Instantiate(myCake2, target.transform.position + new Vector3(-2, 0, 0), Quaternion.identity) as GameObject;
         }
         else
         {
