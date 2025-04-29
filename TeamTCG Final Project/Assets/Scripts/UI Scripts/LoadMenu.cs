@@ -9,6 +9,6 @@ public class LoadMenu : MonoBehaviour
 {
     public void LoadGame()
     {
-        SceneManager.LoadSceneAsync(3);
+        SceneManager.LoadSceneAsync(2);
     }
 }
