@@ -13,7 +13,7 @@ public class PlayerAbilities : MonoBehaviour
     enum AbilityOneState
     {
         //list of states for Ability One
-        ready,
+
         active,
         cooldown
     }
@@ -39,13 +39,12 @@ public class PlayerAbilities : MonoBehaviour
     AbilityTwoState state2 = AbilityTwoState.ready;
     AbilityThreeState state3 = AbilityThreeState.ready;
 
-    private int abilityOneLevel = 3;
+    private int abilityOneLevel = 1;
     private int abilityTwoLevel = 1;
     private int abilityThreeLevel = 1;
 
 
     //key inputs to test abilities
-    public KeyCode key1;
     public KeyCode key2;
     public KeyCode key3;
     void Update()
@@ -54,30 +53,29 @@ public class PlayerAbilities : MonoBehaviour
         switch (state1)
         {
             case AbilityOneState.active:
-                activeTime = 5f;
                 if (activeTime > 0)
                 {
                     activeTime -= Time.deltaTime;
-                    abilityOne.Activate(abilityOneLevel);
                     state1 = AbilityOneState.active;
-                    activeTime = abilityOne.activeTime;
                     Debug.Log("Spawning Balloon");
                 }
                 else
                 {
+                    abilityOne.Deactivate(abilityOneLevel);
                     state1 = AbilityOneState.cooldown;
                     cooldownTime = abilityOne.cooldownTime;
                 }
                 break;
             case AbilityOneState.cooldown:
-                cooldownTime = 3f;
                 if (cooldownTime > 0)
                 {
                     cooldownTime -= Time.deltaTime;
                 }
                 else
                 {
-                    state1 = AbilityOneState.ready;
+                    abilityOne.Activate(abilityOneLevel);
+                    state1 = AbilityOneState.active;
+                    activeTime = abilityOne.activeTime;
                 }
                 break;
         }

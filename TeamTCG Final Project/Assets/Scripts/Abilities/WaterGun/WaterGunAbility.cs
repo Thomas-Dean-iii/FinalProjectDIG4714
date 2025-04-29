@@ -10,7 +10,6 @@ public class WaterGunAbility : Ability
     public GameObject myWaterGun2;
     public GameObject myWaterGun3;
     public PlayerController target;
-    public float firingSpeed;
 
     public override void Activate(int level)
     {

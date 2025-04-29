@@ -15,7 +15,5 @@ public class LoadCharacter : MonoBehaviour
         GameObject prefab = characterPrefabs[selectedCharacter];
         GameObject clone = Instantiate(prefab, spawnPoint.position, Quaternion.identity) as GameObject;
         label.text = prefab.name;
-    }
-
-    
+    } 
 }
