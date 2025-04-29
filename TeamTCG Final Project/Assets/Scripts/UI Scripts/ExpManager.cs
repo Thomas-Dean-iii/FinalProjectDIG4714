@@ -8,10 +8,11 @@ public class ExpManager : MonoBehaviour, IDataPersistence
 {
     public int level;
     public int currentExp;
-    public int expToLevel = 200; // exp needed to level up
+    public int expToLevel = 300; // exp needed to level up
     public float expMultiplier = 1.4f; // multiplier for exp, adds 20% more exp each level
     public Slider expSlider; // UI slider to show exp progress
     public TMP_Text currentLevelText;
+    public TMP_Text resultsLevelText;
 
 
     public void LoadData(GameData data)
@@ -24,14 +25,14 @@ public class ExpManager : MonoBehaviour, IDataPersistence
         data.level = this.level;
     }
 
-   
-    
+
+
     private void Start()
     {
         UpdateUI();
     }
-    
-   private void Update()
+
+    private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E)) // for testing purposes
         {
@@ -50,8 +51,8 @@ public class ExpManager : MonoBehaviour, IDataPersistence
 
     public void GainExperience(int amount)
     {
-        currentExp += amount; 
-        if(currentExp >= expToLevel)
+        currentExp += amount;
+        if (currentExp >= expToLevel)
         {
             LevelUp();
         }
@@ -62,7 +63,11 @@ public class ExpManager : MonoBehaviour, IDataPersistence
     {
         level++;
         currentExp -= expToLevel; // makes the leftover exp available for the next level
-        expToLevel = Mathf.RoundToInt(expToLevel * expMultiplier); // 
+        expToLevel = Mathf.RoundToInt(expToLevel * expMultiplier);
+
+        // UiController.instance.levelUpScreen.SetActive(true); // Show level up screen
+
+        //Time.timeScale = 0f; // pauses the game
     }
 
     public void UpdateUI()
@@ -70,5 +75,6 @@ public class ExpManager : MonoBehaviour, IDataPersistence
         expSlider.maxValue = expToLevel;
         expSlider.value = currentExp;
         currentLevelText.text = "Level: " + level;
+        resultsLevelText.text = "Level: " + level; // Update the level text in the results screen
     }
 }
