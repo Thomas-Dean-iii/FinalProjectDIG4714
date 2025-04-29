@@ -39,9 +39,9 @@ public class PlayerAbilities : MonoBehaviour
     AbilityTwoState state2 = AbilityTwoState.ready;
     AbilityThreeState state3 = AbilityThreeState.ready;
 
-    int abilityOneLevel = 1;
-    int abilityTwoLevel = 1;
-    int abilityThreeLevel = 1;
+    public int abilityOneLevel = 1;
+    public int abilityTwoLevel = 1;
+    public int abilityThreeLevel = 1;
 
 
     //key inputs to test abilities
