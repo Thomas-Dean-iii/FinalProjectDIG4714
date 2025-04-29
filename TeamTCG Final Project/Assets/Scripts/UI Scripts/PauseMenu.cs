@@ -26,13 +26,8 @@ public class PauseMenu : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        ResumeTime();
-    }
-
-   private void ResumeTime()
-    {
-        Time.timeScale = 1;
+        SceneManager.LoadScene(2);
+        
     }
     
 }
