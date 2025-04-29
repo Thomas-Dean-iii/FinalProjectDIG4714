@@ -16,6 +16,7 @@ public class UiController : MonoBehaviour
     }
 
     public TMP_Text timerText;
+    public GameObject levelUpScreen;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
