@@ -65,9 +65,9 @@ public class ExpManager : MonoBehaviour, IDataPersistence
         currentExp -= expToLevel; // makes the leftover exp available for the next level
         expToLevel = Mathf.RoundToInt(expToLevel * expMultiplier);
 
-        // UiController.instance.levelUpScreen.SetActive(true); // Show level up screen
+        UiController.instance.levelUpScreen.SetActive(true); // Show level up screen
 
-        //Time.timeScale = 0f; // pauses the game
+        Time.timeScale = 0f; // pauses the game
     }
 
     public void UpdateUI()
