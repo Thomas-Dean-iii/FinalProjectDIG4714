@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 
 public class PlayerAbilities : MonoBehaviour
@@ -45,11 +46,9 @@ public class PlayerAbilities : MonoBehaviour
     AbilityTwoState state2 = AbilityTwoState.inactive;
     AbilityThreeState state3 = AbilityThreeState.inactive;
 
-    //key inputs to test abilities
-    public KeyCode key2;
-    public KeyCode key3;
     void Update()
     {
+        //Handles state for Ability 1
         switch (state1)
         {
             case AbilityOneState.active:
