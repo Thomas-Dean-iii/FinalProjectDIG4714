@@ -15,6 +15,10 @@ public class PersistentData : MonoBehaviour
     public GameObject clown;
     public GameObject princess;
     public GameObject magician;
+
+    public GameObject rButton4;
+    public GameObject rButton5;
+    public GameObject rButton6; 
     
     
     private void Awake()
@@ -40,6 +44,11 @@ public class PersistentData : MonoBehaviour
             }
         }
         
+    }
+
+    void Start()
+    {
+        Rereference();
     }
 
     private IEnumerator WaitForSceneLoad()
@@ -73,9 +82,36 @@ public class PersistentData : MonoBehaviour
                     break;
             }
     }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Debug.Log("Scene loaded: " + scene.name);
+
+        // Re-reference your buttons here after the scene loads
+        Rereference();
+    }
     
     void Update()
     {
+         SceneManager.sceneLoaded += OnSceneLoaded;
         //LoadCharacterScene();
+    }
+
+    public void Rereference()
+    {
+        rButton4 = GameObject.Find("Clown");
+        rButton5 = GameObject.Find("Princess");
+        rButton6 = GameObject.Find("Magician");
+
+        // Reassign the buttons to unlockButtons array (assuming it's sized properly)
+        if (buttons == null || buttons.Length < 3)
+        {
+            buttons = new StoreButton[3]; // Ensure enough space
+        }
+
+        if (rButton4 != null) buttons[0] = rButton4.GetComponent<StoreButton>();
+        if (rButton5 != null) buttons[1] = rButton5.GetComponent<StoreButton>();
+        if (rButton6 != null) buttons[2] = rButton6.GetComponent<StoreButton>();
+
     }
 }
