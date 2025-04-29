@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CharacterUnlock : MonoBehaviour, IDataPersistence
 {
@@ -9,6 +10,11 @@ public class CharacterUnlock : MonoBehaviour, IDataPersistence
     public Button[] unlockButtons;
     public PlayerStats playerStats;
     int characterAt;
+
+    public GameObject rButton1;
+    public GameObject rButton2;
+    public GameObject rButton3; 
+
     private void Awake()
     {
         if(instance != null && instance != this)
@@ -49,6 +55,10 @@ public class CharacterUnlock : MonoBehaviour, IDataPersistence
 
         // Update unlock buttons based on saved progress
         UpdateUnlocks();
+
+        Rereference();
+
+
         
     }
 
@@ -59,6 +69,16 @@ public class CharacterUnlock : MonoBehaviour, IDataPersistence
         playerStats = FindObjectOfType<PlayerStats>();
         if (playerStats == null) return;  // Still null? Don't continue.
     }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Debug.Log("Scene loaded: " + scene.name);
+
+        // Re-reference your buttons here after the scene loads
+        Rereference();
+    }
+
+    SceneManager.sceneLoaded += OnSceneLoaded; // maybe
 
     int xp = playerStats.level;
     //Debug.Log("Player Level: " + xp);
@@ -103,6 +123,26 @@ public class CharacterUnlock : MonoBehaviour, IDataPersistence
         PlayerPrefs.SetInt("playerXP", 0);       // Reset player XP if you track it separately
 
         PlayerPrefs.Save();
+        UpdateUnlocks();
+    }
+
+    public void Rereference()
+    {
+        rButton1 = GameObject.Find("SelectClown");
+        rButton2 = GameObject.Find("SelectPrincess");
+        rButton3 = GameObject.Find("SelectMagician");
+
+        // Reassign the buttons to unlockButtons array (assuming it's sized properly)
+        if (unlockButtons == null || unlockButtons.Length < 3)
+        {
+            unlockButtons = new Button[3]; // Ensure enough space
+        }
+
+        if (rButton1 != null) unlockButtons[0] = rButton1.GetComponent<Button>();
+        if (rButton2 != null) unlockButtons[1] = rButton2.GetComponent<Button>();
+        if (rButton3 != null) unlockButtons[2] = rButton3.GetComponent<Button>();
+
+        // Update buttons visibility (this is just an example)
         UpdateUnlocks();
     }
 }
