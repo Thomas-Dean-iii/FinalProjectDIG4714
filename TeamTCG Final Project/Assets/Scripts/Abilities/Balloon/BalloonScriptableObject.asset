@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: BalloonScriptableObject
   m_EditorClassIdentifier: 
   name: 
-  cooldownTime: 0
-  activeTime: 0
+  cooldownTime: 3
+  activeTime: 5
   balooonVelocity: 0
   myBalloon1: {fileID: 2346095561133664942, guid: 579f3b44c84b78f4a80c4981081d75ba, type: 3}
   myBalloon2: {fileID: 2346095561133664942, guid: cfbba3162b125524f9ef969eb154911d, type: 3}
   myBalloon3: {fileID: 2346095561133664942, guid: ad3c86971e0243f46bd053ce9a2d923a, type: 3}
   target: {fileID: 0}
   rotationSpeed: 0
+  cooldownTime: 0
+  activeTime: 0

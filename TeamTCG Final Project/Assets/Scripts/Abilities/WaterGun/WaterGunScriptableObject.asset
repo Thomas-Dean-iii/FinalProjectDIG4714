@@ -19,4 +19,3 @@ MonoBehaviour:
   myWaterGun2: {fileID: 8264858864618583204, guid: efe21450febead447927fbfb0ff10a10, type: 3}
   myWaterGun3: {fileID: 1679454625401967898, guid: 3e03de7381b7ac6409398b2604704b5c, type: 3}
   target: {fileID: 0}
-  firingSpeed: 0

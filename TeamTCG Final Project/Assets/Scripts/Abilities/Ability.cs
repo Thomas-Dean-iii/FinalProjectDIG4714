@@ -10,4 +10,5 @@ public class Ability : ScriptableObject
 
     //activates the ability
     public virtual void Activate(int level) { }
+    public virtual void Deactivate(int level) { }
 }
